@@ -464,10 +464,10 @@
                                     <h3>Contact us </h3>
                                     <ul class="loca">
                                         <li>
-                                            <a href="#"><img src="icon/loc.png" alt="#" /></a>K15DCPM06
-                                            <br>ĐẠI HỌC GIA ĐỊNH </li>
+                                            <a href="#"><img src="icon/loc.png" alt="#" /></a>
+                                            ĐẠI HỌC GIA ĐỊNH </li>
                                         <li>
-                                            <a href="#"><img src="icon/call.png" alt="#" /></a>0696969696 </li>
+                                            <a href="#"><img src="icon/call.png" alt="#" /></a> K15DCPM06 </li>
                                         <li>
                                             <a href="#"><img src="icon/email.png" alt="#" /></a>NHOM7@gmail.com </li>
 

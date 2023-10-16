@@ -163,3 +163,5 @@ book/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFile
 book/target/surefire-reports/com.example.AppTest.txt
 book/target/surefire-reports/TEST-com.example.AppTest.xml
 book/target/test-classes/com/example/AppTest.class
+book/target/classes/com/example/book/controllers/AdminServletController.class
+book/target/classes/com/example/book/controllers/TableServletController.class
