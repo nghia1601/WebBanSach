@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" isELIgnored="false" %>
-
+<%@ taglib uri="jakarta.tags.core" prefix="c" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -42,9 +42,9 @@
 
 <body class="main-layout">
     <!-- loader  -->
-    <div class="loader_bg">
+    <!-- <div class="loader_bg">
         <div class="loader"><img src="images/loading.gif" alt="#" /></div>
-    </div>
+    </div> -->
 
     <div class="wrapper">
 
@@ -216,12 +216,14 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="title">
-                                <h2> Categories</h2>
+                                <h2> Thể Loại</h2>
                                 <ul class="categiri">
-                                    <li><a href="#brand">Sách Code</a></li>
-                                    <li><a href="#shoes">Tiểu Thuyết</a></li>
-                                    <li><a href="#jewellery">Tự Truyện</a></li>
-                                    <li><a href="#kids">Tâm Lý</a></li>
+                                    <li><a href="#sachcode">Sách Code</a></li>
+                                    <li><a href="#tieuthuyet">Tiểu Thuyết</a></li>
+                                    <li><a href="#tutruyen">Tự Truyện</a></li>
+                                    <li><a href="#tamly">Tâm Lý</a></li>
+                                    <li><a href="product">Xem Thêm</a></li>
+                                    
                                     <!--li class="active"><a href="#">Clothing</a></!--li-->
                                     <!--li><a href="#">Electronics</a></!--li-->
                                     <!--li><a href="#">Watches</a></!--li-->
@@ -245,6 +247,7 @@
                                     <h4>Giá :<span class="nolmal">100$</span></h4>
 
                                 </div>
+                                <a class="buynow" href="#">Add To Card</a>
                                 <a class="buynow" href="#">Buy now</a>
                             </div>
                             <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 margintop">
@@ -252,6 +255,7 @@
                                     <i><img src="images/javacode.png"/></i>
                                     <h4>Giá :<span class="nolmal">100$</span></h4>
                                 </div>
+                                <a class="buynow" href="#">Add To Card</a>
                                 <a class="buynow" href="#">Buy now</a>
                             </div>
                             <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
@@ -259,6 +263,7 @@
                                     <i><img src="images/codecss.png"/></i>
                                     <h4>Giá :<span class="nolmal">100$</span></h4>
                                 </div>
+                                <a class="buynow" href="#">Add To Card</a>
                                 <a class="buynow" href="#">Buy now</a>
                             </div>
                             <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
@@ -266,11 +271,12 @@
                                     <i><img src="images/codepython.png"/></i>
                                     <h4>Giá :<span class="nolmal">100$</span></h4>
                                 </div>
+                                <a class="buynow" href="#">Add To Card</a>
                                 <a class="buynow" href="#">Buy now</a>
                             </div>
                         </div>
                     </div>
-                    <!--a class="seemore" href="#">See more</!--a-->
+                    
                     <!-- end Sách Code -->
 
                     <!-- Tiểu Thuyết -->
@@ -285,6 +291,7 @@
                                     <h4>Giá :<span class="nolmal">100</span></h4>
 
                                 </div>
+                                <a class="buynow" href="#">Add To Card</a>
                                 <a class="buynow" href="#">Buy now</a>
                             </div>
                             <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 margintop">
@@ -292,6 +299,7 @@
                                     <i><img src="images/nhungnguoikhonkho.png"/></i>
                                     <h4>Giá :<span class="nolmal">100</span></h4>
                                 </div>
+                                <a class="buynow" href="#">Add To Card</a>
                                 <a class="buynow" href="#">Buy now</a>
                             </div>
                             <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
@@ -299,6 +307,7 @@
                                     <i><img src="images/thep.png"/></i>
                                     <h4>Giá :<span class="nolmal">100</span></h4>
                                 </div>
+                                <a class="buynow" href="#">Add To Card</a>
                                 <a class="buynow" href="#">Buy now</a>
                             </div>
                             <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
@@ -306,6 +315,7 @@
                                     <i><img src="images/tramnamcodon.png"/></i>
                                     <h4>Giá :<span class="nolmal">100</span></h4>
                                 </div>
+                                <a class="buynow" href="#">Add To Card</a>
                                 <a class="buynow" href="#">Buy now</a>
                             </div>
                         </div>
@@ -356,6 +366,7 @@
                                 <h4>Giá :<span class="nolmal">100</span></h4>
 
                             </div>
+                            <a class="buynow" href="#">Add To Card</a>
                             <a class="buynow" href="#">Buy now</a>
                         </div>
                         <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 margintop">
@@ -363,6 +374,7 @@
                                 <i><img src="images/tesla.png"/></i>
                                 <h4>Giá :<span class="nolmal">100</span></h4>
                             </div>
+                            <a class="buynow" href="#">Add To Card</a>
                             <a class="buynow" href="#">Buy now</a>
                         </div>
                         <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
@@ -370,6 +382,7 @@
                                 <i><img src="images/12namnole.png"/></i>
                                 <h4>Giá :<span class="nolmal">100</span></h4>
                             </div>
+                            <a class="buynow" href="#">Add To Card</a>
                             <a class="buynow" href="#">Buy now</a>
                         </div>
                         <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
@@ -377,6 +390,7 @@
                                 <i><img src="images/nhatky.png"/></i>
                                 <h4>Giá :<span class="nolmal">100</span></h4>
                             </div>
+                            <a class="buynow" href="#">Add To Card</a>
                             <a class="buynow" href="#">Buy now</a>
                         </div>
                     </div>
@@ -402,6 +416,7 @@
                                 <h4>Giá :<span class="nolmal">100</span></h4>
 
                             </div>
+                            <a class="buynow" href="#">Add To Card</a>
                             <a class="buynow" href="#">Buy now</a>
                         </div>
                         <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 margintop">
@@ -409,6 +424,7 @@
                                 <i><img src="images/tamlyhoc.png"/></i>
                                 <h4>Giá :<span class="nolmal">100</span></h4>
                             </div>
+                            <a class="buynow" href="#">Add To Card</a>
                             <a class="buynow" href="#">Buy now</a>
                         </div>
                         <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
@@ -416,6 +432,7 @@
                                 <i><img src="images/bucxuc.png"/></i>
                                 <h4>Giá :<span class="nolmal">100</span></h4>
                             </div>
+                            <a class="buynow" href="#">Add To Card</a>
                             <a class="buynow" href="#">Buy now</a>
                         </div>
                         <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
@@ -423,6 +440,7 @@
                                 <i><img src="images/tuduy.png"/></i>
                                 <h4>Giá :<span class="nolmal">100</span></h4>
                             </div>
+                            <a class="buynow" href="#">Add To Card</a>
                             <a class="buynow" href="#">Buy now</a>
                         </div>
                     </div>

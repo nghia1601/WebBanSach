@@ -3,6 +3,10 @@ package com.example.book.model;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
+
+
 
 
 public class DBCrud {
@@ -11,6 +15,8 @@ public class DBCrud {
     ResultSet rs = null;
     Connection conn = null;
 
+
+    //dang nhap
     public Account login(String user, String pass) {
         String sql = "SELECT * FROM account WHERE user = ? AND pass = ?";
 
@@ -31,9 +37,82 @@ public class DBCrud {
         return null;
     }
 
+    //tra ve list sach
+    public List<Product> getAllProduct() {
+        List<Product> list = new ArrayList<>();
+        String query = "select * from book";
+        try {
+            new MySQLConnector();
+            conn = MySQLConnector.getMySQLConnection();
+            ps = conn.prepareStatement(query);
+            rs = ps.executeQuery();
+            while(rs.next()) {
+                list.add(new Product(rs.getString(1),
+                 rs.getString(2),
+                  rs.getString(3),
+                   rs.getString(4),
+                    rs.getDouble(5),
+                     rs.getString(6),
+                      rs.getString(7)));
+            }
+
+        } catch (Exception e) {
+            // TODO: handle exception
+        }
 
 
+        return list;
+    }
 
+    //tra ve list loai sach
+    public List<Category> getAllCategory() {
+        List<Category> list = new ArrayList<>();
+        String query = "select * from loaisach";
+        try {   
+            new MySQLConnector();
+            conn = MySQLConnector.getMySQLConnection();
+            ps = conn.prepareStatement(query);
+            rs = ps.executeQuery();
+            while(rs.next()) {
+                list.add(new Category(rs.getString(1),
+                 rs.getString(2)));
+            }
+
+        } catch (Exception e) {
+            // TODO: handle exception
+        }
+
+
+        return list;
+    }
+    
+    //tra ve list sach theo ID loai (by category)
+    public List<Product> getAllProductByCID(String idLoai) {
+        List<Product> list = new ArrayList<>();
+        String query = "select * from book where idLoai = ? ";
+        try {
+            new MySQLConnector();
+            conn = MySQLConnector.getMySQLConnection();
+            ps = conn.prepareStatement(query);
+            ps.setString(1, idLoai);
+            rs = ps.executeQuery();
+            while(rs.next()) {
+                list.add(new Product(rs.getString(1),
+                 rs.getString(2),
+                  rs.getString(3),
+                   rs.getString(4),
+                    rs.getDouble(5),
+                     rs.getString(6),
+                      rs.getString(7)));
+            }
+
+        } catch (Exception e) {
+            // TODO: handle exception
+        }
+
+
+        return list;
+    }
 
 
 
