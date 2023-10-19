@@ -7,7 +7,7 @@ import com.example.book.model.Category;
 import com.example.book.model.DBCrud;
 import com.example.book.model.Product;
 
-import jakarta.servlet.RequestDispatcher;
+
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -32,6 +32,7 @@ public class CategorySC extends HttpServlet{
         //set data toi jsp
         req.setAttribute("listP", list);
         req.setAttribute("listC", listC);
+        
 
         req.getRequestDispatcher("/WEB-INF/views/ProductPage.jsp").forward(req, resp);;
 
