@@ -113,7 +113,7 @@
                                                 <a href="signup">Signup<img style="margin-left: 15px;" src="icon/6.png" alt="#" /></a>
                                             </li>
                                             <li class="tytyu">
-                                                <a href="giohang"> <img style="margin-right: 15px;" src="icon/2.png" alt="#" /></a>
+                                                <a href="shoppingcard"> <img style="margin-right: 15px;" src="icon/2.png" alt="#" /></a>
                                             </li>
                                             <li class="menu_iconb">
                                                 <a href="timkiem"><img style="margin-right: 15px;" src="icon/3.png" alt="#" /></a>
