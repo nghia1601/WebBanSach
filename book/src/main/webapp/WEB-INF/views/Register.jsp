@@ -24,10 +24,13 @@
 							<h4 class="card-title">Đăng Ký</h4>
 							<form method="POST" class="my-login-validation" novalidate="">
 								<div class="form-group">
-									<label for="name">Username</label>
-									<input id="name" type="text" class="form-control" name="name" required autofocus>
+									<p class="text-danger"> ${mess1} </p>
+									<p class="text-danger"> ${mess2} </p>
+									
+									<label for="username">Username</label>
+									<input id="username" type="text" class="form-control" name="user" required autofocus>
 									<div class="invalid-feedback">
-										What's your name?
+										Bạn chưa nhập Username !
 									</div>
 								</div>
 
@@ -40,10 +43,19 @@
 								</div> -->
 
 								<div class="form-group">
+									
 									<label for="password">Password</label>
-									<input id="password" type="password" class="form-control" name="password" required data-eye>
+									<input id="password" type="password" class="form-control" name="pass" required data-eye>
 									<div class="invalid-feedback">
-										Password is required
+										Bạn chưa nhập Password !
+									</div>
+								</div>
+
+								<div class="form-group">
+									<label for="password">Repeat Password</label>
+									<input id="password" type="password" class="form-control" name="repass" required data-eye>
+									<div class="invalid-feedback">
+										Bạn chưa lập lại Password !
 									</div>
 								</div>
 

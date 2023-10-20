@@ -28,7 +28,10 @@ public class DBCrud {
             ps.setString(2, pass);
             rs = ps.executeQuery();
             while(rs.next()) {
-                return new Account(rs.getInt(1), rs.getString(2), rs.getString(3), rs.getInt(4));
+                return new Account(rs.getInt(1),
+                 rs.getString(2),
+                  rs.getString(3),
+                   rs.getInt(4));
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -36,6 +39,47 @@ public class DBCrud {
 
         return null;
     }
+
+    //checkAccount: tra cuu username xem da co trong db chua
+    public Account checkAccountExit(String user) {
+        String sql = "SELECT * FROM account WHERE user = ?";
+
+        try {
+            new MySQLConnector();
+            conn = MySQLConnector.getMySQLConnection();
+            ps = conn.prepareStatement(sql);
+            ps.setString(1, user);
+            rs = ps.executeQuery();
+            while(rs.next()) {
+                return new Account(rs.getInt(1),
+                 rs.getString(2),
+                  rs.getString(3),
+                   rs.getInt(4));
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return null;
+    }
+
+    //Registe
+    public void register(String user, String pass) {
+        String query = "insert into account values (0,?,?,0)";
+        try {
+            new MySQLConnector();
+            conn = MySQLConnector.getMySQLConnection();
+            ps = conn.prepareStatement(query);
+            ps.setString(1, user);
+            ps.setString(2, pass);
+            ps.executeUpdate();
+            
+        } catch (Exception e) {
+            
+        }
+    }
+
+
 
     //tra ve list sach
     public List<Product> getAllProduct() {

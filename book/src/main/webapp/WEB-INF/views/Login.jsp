@@ -1,5 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" isELIgnored="false" %>
-
+<%@ taglib uri="jakarta.tags.core" prefix="c" %>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -25,10 +25,13 @@
 							<h4 class="card-title">Đăng Nhập</h4>
 							<form method="POST" class="my-login-validation" novalidate="">
 								<div class="form-group">
+									
+										<p class="text-danger"> ${mess} </p>
+									
 									<label for="username">Username</label>
 									<input id="username" type="username" class="form-control" name="user" value="" required autofocus>
 									<div class="invalid-feedback">
-										Email is invalid
+										Bạn chưa nhập Username
 									</div>
 								</div>
 
@@ -40,7 +43,7 @@
 									</label>
 									<input id="password" type="password" class="form-control" name="pass" required data-eye>
 								    <div class="invalid-feedback">
-								    	Password is required
+								    	Bạn chưa nhập Password!
 							    	</div>
 								</div>
 

@@ -32,6 +32,7 @@ public class LoginServletController extends HttpServlet{
         DBCrud dao = new DBCrud();
         Account a = dao.login(username, password);
         if(a == null){
+            req.setAttribute("mess","Username hoặc Password không đúng");//trả về khi ng dùng nhập sai tên tk hoặc mk
             req.getRequestDispatcher("/WEB-INF/views/Login.jsp").forward(req, resp);
         }else{
             resp.sendRedirect("home");
