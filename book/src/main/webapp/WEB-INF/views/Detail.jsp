@@ -1,15 +1,12 @@
-
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" isELIgnored="false" %>
 <%@ taglib uri="jakarta.tags.core" prefix="c" %>
-<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
-<%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 
 <!DOCTYPE html>
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>Chi Tiết</title>
+        <title>JSP Page</title>
         <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
         <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
         <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -49,10 +46,10 @@
         </style>
     </head>
     <body>
-        <jsp:include page="Menu.jsp"></jsp:include>
+        <jsp:include page="Header.jsp"></jsp:include>
             <div class="container">
                 <div class="row">
-                <jsp:include page="Left.jsp"></jsp:include>
+                
                 <div class="col-sm-9">
                     <div class="container">
                         <div class="card">
@@ -68,39 +65,25 @@
                                 </aside>
                                 <aside class="col-sm-7">
                                     <article class="card-body p-5">
-                                        <h3 class="title mb-3">${detail.name}</h3>
+                                        <h1 class="title mb-3">Tên Sách: ${detail.tenSach}</h1>
 
                                         <p class="price-detail-wrap"> 
                                             <span class="price h3 text-warning"> 
-                                                <span class="currency">US $</span><span class="num">${detail.price}</span>
+                                                <span class="currency">Giá: </span><span class="num">${detail.giaSach}</span>
                                             </span> 
                                         </p> <!-- price-detail-wrap .// -->
                                         <dl class="item-property">
-                                            <dt>Description</dt>
+                                            <dt>Mô Tả</dt>
                                             <dd><p>
-                                                    ${detail.description}
+                                                    ${detail.moTa}
                                                 </p></dd>
                                         </dl>
 
                                         <hr>
-                                        <div class="row">
-                                            <div class="col-sm-5">
-                                                <dl class="param param-inline">
-                                                    <dt>Quantity: </dt>
-                                                    <dd>
-                                                        <select class="form-control form-control-sm" style="width:70px;">
-                                                            <option> 1 </option>
-                                                            <option> 2 </option>
-                                                            <option> 3 </option>
-                                                        </select>
-                                                    </dd>
-                                                </dl>  <!-- item-property .// -->
-                                            </div> <!-- col.// -->
-
-                                        </div> <!-- row.// -->
+                                        
                                         <hr>
-                                        <a href="#" class="btn btn-lg btn-primary text-uppercase"> Buy now </a>
-                                        <a href="#" class="btn btn-lg btn-outline-primary text-uppercase"> <i class="fas fa-shopping-cart"></i> Add to cart </a>
+                                        <a class="buynow" href="#">Add To Card</a>
+                                        <a class="buynow" href="#">Buy now</a>
                                     </article> <!-- card-body.// -->
                                 </aside> <!-- col.// -->
                             </div> <!-- row.// -->

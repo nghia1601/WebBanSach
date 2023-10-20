@@ -161,8 +161,7 @@
                             </div>
                         </div>
                     </div>
-
-                    <!-- Sách Code -->
+                    
                     
                     <div id="sachcode"  class="brand-bg">
                         <!-- <h3>Sách Code </h3> -->
@@ -175,7 +174,7 @@
                                     
                                         
                                         <i><img src="${p.image}"/></i>
-                                        <h4>${p.tenSach}</h4>
+                                        <h4><a href="detail?pid=${p.idSach}"> ${p.tenSach}</a> </h4>
                                         <h4>Giá : ${p.giaSach}$</h4>
                                     
                                         

@@ -65,15 +65,15 @@
                                 </aside>
                                 <aside class="col-sm-7">
                                     <article class="card-body p-5">
-                                        <h1 class="title mb-3">Tên Sách: ${detail.tenSach}</h1>
+                                        <h3 class="title mb-3">${detail.tenSach}</h3>
 
                                         <p class="price-detail-wrap"> 
                                             <span class="price h3 text-warning"> 
-                                                <span class="currency">Giá: </span><span class="num">${detail.giaSach}</span>
+                                                <span class="currency">US $</span><span class="num">${detail.giaSach}</span>
                                             </span> 
                                         </p> <!-- price-detail-wrap .// -->
                                         <dl class="item-property">
-                                            <dt>Mô Tả</dt>
+                                            <dt>Description</dt>
                                             <dd><p>
                                                     ${detail.moTa}
                                                 </p></dd>

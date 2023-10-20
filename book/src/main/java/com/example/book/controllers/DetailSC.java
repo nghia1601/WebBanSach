@@ -2,7 +2,10 @@ package com.example.book.controllers;
 
 import java.io.IOException;
 
-import jakarta.servlet.RequestDispatcher;
+import com.example.book.model.DBCrud;
+import com.example.book.model.Product;
+
+
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -14,9 +17,21 @@ public class DetailSC extends HttpServlet{
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        
+        //tim kiem san pham theo loai sach (idSach)
+        String idSach = req.getParameter("pid");
 
-        RequestDispatcher requestDispatcher = req.getRequestDispatcher("/WEB-INF/views/Detail.jsp");
-        requestDispatcher.forward(req, resp);
+        //lay data tu form DBCrud
+        DBCrud db = new DBCrud();
+
+        Product p = db.getAllProductByID(idSach);
+        
+        req.setAttribute("detail", p);
+
+        req.getRequestDispatcher("/WEB-INF/views/Detail.jsp").forward(req, resp);
+
+
+        
     }
 
     @Override

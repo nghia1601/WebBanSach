@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" isELIgnored="false" %>
-<%@ taglib uri="jakarta.tags.core" prefix="c" %>
+
+
+
+<!-- homepage -->
 
 <!DOCTYPE html>
 <html lang="en">
@@ -14,7 +17,7 @@
     
     
     <!-- site metas -->
-    <title>NHOM 5</title>
+    <title>NHOM 7</title>
 
 
 
@@ -42,12 +45,96 @@
 
 <body class="main-layout">
     <!-- loader  -->
-    <!-- <div class="loader_bg">
+    <div class="loader_bg">
         <div class="loader"><img src="images/loading.gif" alt="#" /></div>
-    </div> -->
+    </div>
 
-    <!-- header -->
-    <jsp:include page="Header.jsp"></jsp:include>
+    <div class="wrapper">
+
+        <!-- end loader -->
+        <div class="sidebar">
+            <!-- Sidebar  -->
+            <nav id="sidebar">
+
+                <div id="dismiss">
+                    <i class="fa fa-arrow-left"></i>
+                </div>
+
+                <ul class="list-unstyled components">
+
+                    <li class="active">
+                        <!-- home -->
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#brand">SÁCH CODE</a>
+                    </li>
+                    <li>
+                        <a href="#shoes">TIỂU THUYẾT</a>
+                    </li>
+                    <li>
+                        <a href="#jewellery">TỰ TRUYỆN</a>
+                    </li>
+                    <li>
+                        <a href="#jewellery2">TÂM LÝ</a>
+                    </li>
+                </ul>
+
+            </nav>
+        </div>
+
+        <div id="content">
+            <!-- header -->
+            <header>
+                <!-- header inner -->
+                <div class="head_top">
+                    <div class="header">
+
+                        <div class="container-fluid">
+
+                            <div class="row">
+                                <div class="col-lg-3 logo_section">
+                                    <div class="full">
+                                        <div class="center-desk">
+                                            <div class="logo">
+                                                <!-- home and logo-->
+                                                <a href="home"><img src="images/xitrum.png" alt="#"></a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-lg-9">
+                                    <div class="right_header_info">
+                                        <ul>
+                                            <li class="menu_iconb">
+                                                <a href="#"><img style="margin-right: 15px;" src="icon/1.png" alt="#" />K15DCPM06</a>
+                                            </li>
+                                            <li class="menu_iconb">
+                                                <a href="#">Log in <img style="margin-right: 15px;" src="icon/5.png" alt="#" /> </a>
+                                            </li>
+                                            <li class="menu_iconb">
+                                                <a href="#">Signup<img style="margin-left: 15px;" src="icon/6.png" alt="#" /></a>
+                                            </li>
+                                            <li class="tytyu">
+                                                <a href="#"> <img style="margin-right: 15px;" src="icon/2.png" alt="#" /></a>
+                                            </li>
+                                            <li class="menu_iconb">
+                                                <a href="#"><img style="margin-right: 15px;" src="icon/3.png" alt="#" /></a>
+                                            </li>
+
+                                            <li>
+                                                <button type="button" id="sidebarCollapse">
+                                                    <img src="images/menu_icon.png" alt="#" />
+                                                </button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- end header inner -->
 
                     <!-- end header -->
                     <section class="slider_section">
@@ -132,14 +219,12 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="title">
-                                <h2> Thể Loại</h2>
+                                <h2> Categories</h2>
                                 <ul class="categiri">
-                                    <li><a href="#sachcode">Sách Code</a></li>
-                                    <li><a href="#tieuthuyet">Tiểu Thuyết</a></li>
-                                    <li><a href="#tutruyen">Tự Truyện</a></li>
-                                    <li><a href="#tamly">Tâm Lý</a></li>
-                                    <li><a href="product">Xem Thêm</a></li>
-                                    
+                                    <li><a href="#brand">Sách Code</a></li>
+                                    <li><a href="#shoes">Tiểu Thuyết</a></li>
+                                    <li><a href="#jewellery">TỰ TRUYỆN</a></li>
+                                    <li><a href="#kids">Tâm Lý</a></li>
                                     <!--li class="active"><a href="#">Clothing</a></!--li-->
                                     <!--li><a href="#">Electronics</a></!--li-->
                                     <!--li><a href="#">Watches</a></!--li-->
@@ -152,27 +237,24 @@
                     </div>
 
                     <!-- Sách Code -->
-                    <div id="sachcode"  class="brand-bg">
-                        <h3>Sách Code </h3>
+                    <div id="brand"  class="brand-bg">
+                        <h3>Sách Code !</h3>
                         <div class="row">
                             <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 margintop">
                                 <div class="brand-box">
                                     <h5>Sale</h5>
-                                    <i><img src="images/codethieunhi.png"/>       
+                                    <i><img src="images/codethieunhi.png"/>
                                 </i>
-                                    <h4><a href="detail?pid=SC01">300 Bài Code TNH</a></h4>
                                     <h4>Giá :<span class="nolmal">100$</span></h4>
 
                                 </div>
-                                <a class="buynow" href="#">Add To Card</a>
                                 <a class="buynow" href="#">Buy now</a>
                             </div>
                             <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 margintop">
                                 <div class="brand-box">
-                                    <i><img src="images/javacode.png"/></i>
+                                    <i><img src="images/codejava.png"/></i>
                                     <h4>Giá :<span class="nolmal">100$</span></h4>
                                 </div>
-                                <a class="buynow" href="#">Add To Card</a>
                                 <a class="buynow" href="#">Buy now</a>
                             </div>
                             <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
@@ -180,7 +262,6 @@
                                     <i><img src="images/codecss.png"/></i>
                                     <h4>Giá :<span class="nolmal">100$</span></h4>
                                 </div>
-                                <a class="buynow" href="#">Add To Card</a>
                                 <a class="buynow" href="#">Buy now</a>
                             </div>
                             <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
@@ -188,16 +269,15 @@
                                     <i><img src="images/codepython.png"/></i>
                                     <h4>Giá :<span class="nolmal">100$</span></h4>
                                 </div>
-                                <a class="buynow" href="#">Add To Card</a>
                                 <a class="buynow" href="#">Buy now</a>
                             </div>
                         </div>
                     </div>
-                    
+                    <!--a class="seemore" href="#">See more</!--a-->
                     <!-- end Sách Code -->
 
                     <!-- Tiểu Thuyết -->
-                    <div id="tieuthuyet" class="shoes-bg">
+                    <div id="shoes" class="shoes-bg">
                         <h3>Tiểu Thuyết</h3>
                         <div class="row">
                             <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 margintop">
@@ -208,7 +288,6 @@
                                     <h4>Giá :<span class="nolmal">100</span></h4>
 
                                 </div>
-                                <a class="buynow" href="#">Add To Card</a>
                                 <a class="buynow" href="#">Buy now</a>
                             </div>
                             <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 margintop">
@@ -216,7 +295,6 @@
                                     <i><img src="images/nhungnguoikhonkho.png"/></i>
                                     <h4>Giá :<span class="nolmal">100</span></h4>
                                 </div>
-                                <a class="buynow" href="#">Add To Card</a>
                                 <a class="buynow" href="#">Buy now</a>
                             </div>
                             <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
@@ -224,7 +302,6 @@
                                     <i><img src="images/thep.png"/></i>
                                     <h4>Giá :<span class="nolmal">100</span></h4>
                                 </div>
-                                <a class="buynow" href="#">Add To Card</a>
                                 <a class="buynow" href="#">Buy now</a>
                             </div>
                             <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
@@ -232,7 +309,6 @@
                                     <i><img src="images/tramnamcodon.png"/></i>
                                     <h4>Giá :<span class="nolmal">100</span></h4>
                                 </div>
-                                <a class="buynow" href="#">Add To Card</a>
                                 <a class="buynow" href="#">Buy now</a>
                             </div>
                         </div>
@@ -272,7 +348,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <div id="tutruyen" class="Jewellery-bg">
+                <div id="jewellery" class="Jewellery-bg">
                     <h3>TỰ TRUYỆN</h3>
                     <div class="row">
                         <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 margintop">
@@ -283,7 +359,6 @@
                                 <h4>Giá :<span class="nolmal">100</span></h4>
 
                             </div>
-                            <a class="buynow" href="#">Add To Card</a>
                             <a class="buynow" href="#">Buy now</a>
                         </div>
                         <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 margintop">
@@ -291,7 +366,6 @@
                                 <i><img src="images/tesla.png"/></i>
                                 <h4>Giá :<span class="nolmal">100</span></h4>
                             </div>
-                            <a class="buynow" href="#">Add To Card</a>
                             <a class="buynow" href="#">Buy now</a>
                         </div>
                         <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
@@ -299,7 +373,6 @@
                                 <i><img src="images/12namnole.png"/></i>
                                 <h4>Giá :<span class="nolmal">100</span></h4>
                             </div>
-                            <a class="buynow" href="#">Add To Card</a>
                             <a class="buynow" href="#">Buy now</a>
                         </div>
                         <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
@@ -307,7 +380,6 @@
                                 <i><img src="images/nhatky.png"/></i>
                                 <h4>Giá :<span class="nolmal">100</span></h4>
                             </div>
-                            <a class="buynow" href="#">Add To Card</a>
                             <a class="buynow" href="#">Buy now</a>
                         </div>
                     </div>
@@ -322,7 +394,7 @@
     <div class="container">
         <div class="row">
             <div class="col-md-12">
-                <div id="tamly" class="Jewellery-bg">
+                <div id="jewellery2" class="Jewellery-bg">
                     <h3>Tâm Lý</h3>
                     <div class="row">
                         <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 margintop">
@@ -333,7 +405,6 @@
                                 <h4>Giá :<span class="nolmal">100</span></h4>
 
                             </div>
-                            <a class="buynow" href="#">Add To Card</a>
                             <a class="buynow" href="#">Buy now</a>
                         </div>
                         <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 margintop">
@@ -341,7 +412,6 @@
                                 <i><img src="images/tamlyhoc.png"/></i>
                                 <h4>Giá :<span class="nolmal">100</span></h4>
                             </div>
-                            <a class="buynow" href="#">Add To Card</a>
                             <a class="buynow" href="#">Buy now</a>
                         </div>
                         <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
@@ -349,7 +419,6 @@
                                 <i><img src="images/bucxuc.png"/></i>
                                 <h4>Giá :<span class="nolmal">100</span></h4>
                             </div>
-                            <a class="buynow" href="#">Add To Card</a>
                             <a class="buynow" href="#">Buy now</a>
                         </div>
                         <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
@@ -357,7 +426,6 @@
                                 <i><img src="images/tuduy.png"/></i>
                                 <h4>Giá :<span class="nolmal">100</span></h4>
                             </div>
-                            <a class="buynow" href="#">Add To Card</a>
                             <a class="buynow" href="#">Buy now</a>
                         </div>
                     </div>
@@ -368,8 +436,98 @@
     </div>
     <!-- end TỰ TRUYỆN -->
 
-    <!-- footer -->
-    <jsp:include page="Footer.jsp"></jsp:include>
+    <!--  footer -->
+    <footer>
+        <div class="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="footer_top">
+                            <div class="row">
+                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                    <a href="home"> <img class="logo1" src="images/xitrum.png" /></a>
+                                </div>
+                                <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
+                                    <ul class="sociel">
+                                        <li> <a href="https://www.facebook.com/profile.php?id=100051803585683"><i class="fa fa-facebook-f"></i></a></li>
+                                        <li> <a href="#"><i class="fa fa-twitter"></i></a></li>
+                                        <li> <a href="#"><i class="fa fa-instagram"></i></a></li>
+                                        <li> <a href="#"><i class="fa fa-linkedin"></i></a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 ">
+                        <div class="row">
+                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 ">
+                                <div class="address">
+                                    <h3>Contact us </h3>
+                                    <ul class="loca">
+                                        <li>
+                                            <a href="#"><img src="icon/loc.png" alt="#" /></a>K15DCPM06
+                                            <br>ĐẠI HỌC GIA ĐỊNH </li>
+                                        <li>
+                                            <a href="#"><img src="icon/call.png" alt="#" /></a>0696969696 </li>
+                                        <li>
+                                            <a href="#"><img src="icon/email.png" alt="#" /></a>NHOM7@gmail.com </li>
+
+                                    </ul>
+
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-6">
+                                <div class="address">
+                                    <h3>MEMBER</h3>
+                                    <ul class="Menu_footer">
+                                        <li class="active"> <a href="">Nguyễn Trọng Nghĩa</a> </li>
+                                        <li><a href="#">Nguyễn Anh Dung</a> </li>
+                                        <li><a href="#">Nguyễn Hoàng Giang</a> </li>
+                                        <li><a href="#">Nguyễn Lâm Trường</a> </li>
+                                        <li><a href="#">Trần Lê Trường Giang</a> </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-lg-3 col-md-6 col-sm-6">
+                                <div class="address">
+                                    <h3>corporation</h3>
+                                    <ul class="Links_footer">
+                                        <li class="active"><a href="#">My account</a> </li>
+                                        <li><a href="#">Wishlist</a> </li>
+                                        <li><a href="#">My Cart</a> </li>
+                                        <li><a href="#"> Checkout</a> </li>
+                                        <li><a href="#">Login</a> </li>
+                                    </ul>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-3 col-md-6 col-sm-6 ">
+                                <div class="address">
+                                    <h3>why choose us</h3>
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna </p>
+                                    <form class="newtetter">
+                                        <input class="tetter" placeholder="Your email" type="text" name="Your email">
+                                        <button class="submit">Subscribe</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+           
+            <div class="copyright"> 
+                <div class="container">
+                <p>Copyright 2019 All Right Reserved By NHOM7</p>
+            </div>
+          </div>
+        </div>
+
+    </footer>
+    <!-- end footer -->
+  
 
     </div>
 

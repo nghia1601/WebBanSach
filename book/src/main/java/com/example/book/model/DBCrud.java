@@ -114,14 +114,32 @@ public class DBCrud {
         return list;
     }
 
+    //tra ve sach theo ID sach 
+    public Product getAllProductByID(String idSach) {
+        
+        String query = "select * from book where idSach = ? ";
+        try {
+            new MySQLConnector();
+            conn = MySQLConnector.getMySQLConnection();
+            ps = conn.prepareStatement(query);
+            ps.setString(1, idSach);
+            rs = ps.executeQuery();
+            while(rs.next()) {
+                return new Product(rs.getString(1),
+                 rs.getString(2),
+                  rs.getString(3),
+                   rs.getString(4),
+                    rs.getDouble(5),
+                     rs.getString(6),
+                      rs.getString(7));
+            }
 
-
-
-
-
-
-
-
+        } catch (Exception e) {
+            // TODO: handle exception
+        }
+        return null;
+    }
+}
 
 
 
@@ -230,5 +248,5 @@ public class DBCrud {
 
 
 */
-}
+
 
