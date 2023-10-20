@@ -61,7 +61,7 @@
 
                     <li class="active">
                         <!-- home -->
-                        <a href="#">Home</a>
+                        <a href="home">Home</a>
                     </li>
                     <li>
                         <a href="#sachcode">SÁCH CODE</a>
@@ -145,18 +145,10 @@
                                 <h2> Thể Loại </h2>
                                 <ul class="categiri">
                                     <c:forEach items="${listC}" var="o">
+                                        
                                         <li><a href="category?idLoai=${o.idLoai}">${o.tenLoai}</a></li>
 
                                     </c:forEach>    
-                                    <!-- <li><a href="#tieuthuyet">Tiểu Thuyết</a></li>
-                                    <li><a href="#tutruyen">Tự Truyện</a></li>
-                                    <li><a href="#tamly">Tâm Lý</a></li> -->
-                                    <!--li class="active"><a href="#">Clothing</a></!--li-->
-                                    <!--li><a href="#">Electronics</a></!--li-->
-                                    <!--li><a href="#">Watches</a></!--li-->
-                                    <!--li><a href="#">Health and Beauty</a></!--li-->
-                                    <!--li><a href="#">Sports</a></!--li-->
-                                    <!--li><a href="#">Home and Garden</a></!--li-->
                                 </ul>
                             </div>
                         </div>

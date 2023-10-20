@@ -1,7 +1,9 @@
 package com.example.book.controllers;
 
 import java.io.IOException;
+import java.util.List;
 
+import com.example.book.model.Category;
 import com.example.book.model.DBCrud;
 import com.example.book.model.Product;
 
@@ -25,8 +27,16 @@ public class DetailSC extends HttpServlet{
         DBCrud db = new DBCrud();
 
         Product p = db.getAllProductByID(idSach);
+
+        List<Product> list = db.getAllProduct();
+        List<Category> listC = db.getAllCategory();
         
+
+        //set data toi jsp
         req.setAttribute("detail", p);
+
+        req.setAttribute("listP", list);
+        req.setAttribute("listC", listC);   
 
         req.getRequestDispatcher("/WEB-INF/views/Detail.jsp").forward(req, resp);
 

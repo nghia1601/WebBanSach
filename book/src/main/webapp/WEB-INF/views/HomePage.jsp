@@ -41,10 +41,7 @@
 <!-- body -->
 
 <body class="main-layout">
-    <!-- loader  -->
-    <!-- <div class="loader_bg">
-        <div class="loader"><img src="images/loading.gif" alt="#" /></div>
-    </div> -->
+    
 
     <!-- header -->
     <jsp:include page="Header.jsp"></jsp:include>
@@ -244,29 +241,9 @@
         </div>
         <!-- end Tiểu Thuyết -->
  
-    <!-- end Categories -->
     
-    <section>
-        <!--  save -->
-
-    <!--div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="save">
-                    <div class="row">
-                        <div class="col-xl-6 col-lg-6 col-md-6 col-sm-12">
-                            <div class="save_box">
-                                <h3>Save Up To 69%</h3>
-                                <a href="#">Buy now</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </!--div-->
-    <!-- end save -->
-    </section>
+    
+    
 
     <!-- TỰ TRUYỆN -->
     <div class="container">
