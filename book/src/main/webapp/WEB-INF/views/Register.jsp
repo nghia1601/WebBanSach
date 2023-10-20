@@ -7,7 +7,7 @@
 	<meta charset="utf-8">
 	<meta name="author" content="Kodinger">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<title>Login Page &mdash; Bootstrap 4 Login Page Snippet</title>
+	<title>Register Page</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 	<link rel="stylesheet" type="text/css" href="css/my-login.css">
 </head>
@@ -21,7 +21,7 @@
 					</div>
 					<div class="card fat">
 						<div class="card-body">
-							<h4 class="card-title">Register</h4>
+							<h4 class="card-title">Đăng Ký</h4>
 							<form method="POST" class="my-login-validation" novalidate="">
 								<div class="form-group">
 									<label for="name">Username</label>
@@ -47,7 +47,7 @@
 									</div>
 								</div>
 
-								<div class="form-group">
+								<!-- <div class="form-group">
 									<div class="custom-checkbox custom-control">
 										<input type="checkbox" name="agree" id="agree" class="custom-control-input" required="">
 										<label for="agree" class="custom-control-label">I agree to the <a href="#">Terms and Conditions</a></label>
@@ -55,21 +55,21 @@
 											You must agree with our Terms and Conditions
 										</div>
 									</div>
-								</div>
+								</div> -->
 
 								<div class="form-group m-0">
 									<button type="submit" class="btn btn-primary btn-block">
-										Register
+										Đăng Ký
 									</button>
 								</div>
 								<div class="mt-4 text-center">
-									Already have an account? <a href="login">Login</a>
+									Bạn Đả Có Tài Khoản ? <a href="login">Đăng Nhập</a>
 								</div>
 							</form>
 						</div>
 					</div>
 					<div class="footer">
-						Copyright &copy; 2017 &mdash; Your Company 
+						Copyright &copy; 2023 &mdash; NHÓM 5 K15DCPM06
 					</div>
 				</div>
 			</div>

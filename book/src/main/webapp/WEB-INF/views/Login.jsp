@@ -22,7 +22,7 @@
 					</div>
 					<div class="card fat">
 						<div class="card-body">
-							<h4 class="card-title">Login</h4>
+							<h4 class="card-title">Đăng Nhập</h4>
 							<form method="POST" class="my-login-validation" novalidate="">
 								<div class="form-group">
 									<label for="username">Username</label>
@@ -34,9 +34,9 @@
 
 								<div class="form-group">
 									<label for="password">Password
-										<a href="forgot" class="float-right">
+										<!-- <a href="forgot" class="float-right">
 											Forgot Password?
-										</a>
+										</a> -->
 									</label>
 									<input id="password" type="password" class="form-control" name="pass" required data-eye>
 								    <div class="invalid-feedback">
@@ -44,26 +44,26 @@
 							    	</div>
 								</div>
 
-								<div class="form-group">
+								<!-- <div class="form-group">
 									<div class="custom-checkbox custom-control">
 										<input type="checkbox" name="remember" id="remember" class="custom-control-input">
 										<label for="remember" class="custom-control-label">Remember Me</label>
 									</div>
-								</div>
+								</div> -->
 
 								<div class="form-group m-0">
 									<button type="submit" class="btn btn-primary btn-block">
-										Login
+										Đăng Nhập
 									</button>
 								</div>
 								<div class="mt-4 text-center">
-									Don't have an account? <a href="register">Create One</a>
+									Bạn Chưa Có Tài Khoản? <a href="register">Đăng Ký</a>
 								</div>
 							</form>
 						</div>
 					</div>
 					<div class="footer">
-						Copyright &copy; 2023 &mdash; K15DCPM06
+						Copyright &copy; 2023 &mdash; NHÓM 5 K15DCPM06
 					</div>
 				</div>
 			</div>
