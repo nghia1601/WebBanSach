@@ -61,12 +61,16 @@
                                         <li class="menu_iconb">
                                             <a href="#"><img style="margin-right: 15px;" src="icon/1.png" alt="#" />K15DCPM06</a>
                                         </li>
-                                        <li class="menu_iconb">
-                                            <a href="login?action=login">Log in<img style="margin-right: 15px;" src="icon/5.png" alt="#" /> </a>
-                                        </li>
-                                        <li class="menu_iconb">
-                                            <a href="signup">Signup<img style="margin-left: 15px;" src="icon/6.png" alt="#" /></a>
-                                        </li>
+                                        <c:if test="${sessionScope.acc == null}">
+                                            <li class="menu_iconb">
+                                                <a href="login?action=login">Đăng Nhập<img style="margin-right: 15px;" src="icon/6.png" alt="#" /> </a>
+                                            </li>
+                                        </c:if>
+                                        <c:if test="${sessionScope.acc != null}">
+                                            <li class="menu_iconb">
+                                                <a href="signup">Đăng Ký<img style="margin-left: 15px;" src="icon/5.png" alt="#" /></a>
+                                            </li>
+                                        </c:if>
                                         <li class="tytyu">
                                             <a href="shoppingcard"> <img style="margin-right: 15px;" src="icon/2.png" alt="#" /></a>
                                         </li>

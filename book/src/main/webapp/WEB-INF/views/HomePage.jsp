@@ -59,7 +59,7 @@
                                                 TỐT
                                             </h1>
                                             <span>Đa dạng mẫu mã, giá cả hợp lí !</span>
-                                            <a href="#">Buy now</a>
+                                            <!-- <a href="#">Buy now</a> -->
                                         </div>
                                     </div>
                                     <div class="col-xl-8 col-lg-8 col-md-8 col-sm-12">

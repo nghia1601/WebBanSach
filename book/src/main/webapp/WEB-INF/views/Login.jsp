@@ -18,7 +18,7 @@
 			<div class="row justify-content-md-center h-100">
 				<div class="card-wrapper">
 					<div class="brand">
-						<img src="images/xitrum.png" alt="logo">
+						<a href="home"><img src="images/xitrum.png" alt="logo"></a>
 					</div>
 					<div class="card fat">
 						<div class="card-body">

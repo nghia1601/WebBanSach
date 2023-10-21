@@ -17,7 +17,7 @@
 			<div class="row justify-content-md-center h-100">
 				<div class="card-wrapper">
 					<div class="brand">
-						<img src="images/xitrum.png" alt="bootstrap 4 login page">
+						<a href="home"><img src="images/xitrum.png" alt="bootstrap 4 login page"></a>
 					</div>
 					<div class="card fat">
 						<div class="card-body">
@@ -34,13 +34,7 @@
 									</div>
 								</div>
 
-								<!-- <div class="form-group">
-									<label for="email">E-Mail Address</label>
-									<input id="email" type="email" class="form-control" name="email" required>
-									<div class="invalid-feedback">
-										Your email is invalid
-									</div>
-								</div> -->
+								
 
 								<div class="form-group">
 									
@@ -59,15 +53,7 @@
 									</div>
 								</div>
 
-								<!-- <div class="form-group">
-									<div class="custom-checkbox custom-control">
-										<input type="checkbox" name="agree" id="agree" class="custom-control-input" required="">
-										<label for="agree" class="custom-control-label">I agree to the <a href="#">Terms and Conditions</a></label>
-										<div class="invalid-feedback">
-											You must agree with our Terms and Conditions
-										</div>
-									</div>
-								</div> -->
+								
 
 								<div class="form-group m-0">
 									<button type="submit" class="btn btn-primary btn-block">
