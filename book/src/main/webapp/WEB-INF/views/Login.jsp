@@ -15,61 +15,64 @@
 <body class="my-login-page">
 	<section class="h-100">
 		<div class="container h-100">
-			<div class="row justify-content-md-center h-100">
-				<div class="card-wrapper">
-					<div class="brand">
-						<a href="home"><img src="images/xitrum.png" alt="logo"></a>
-					</div>
-					<div class="card fat">
-						<div class="card-body">
-							<h4 class="card-title">Đăng Nhập</h4>
-							<form method="POST" class="my-login-validation" novalidate="">
-								<div class="form-group">
+			<form action="login" method="post" class="login-form">
+
+				<div class="row justify-content-md-center h-100">
+					<div class="card-wrapper">
+						<div class="brand">
+							<a href="home"><img src="images/xitrum.png" alt="logo"></a>
+						</div>
+						<div class="card fat">
+							<div class="card-body">
+								<h4 class="card-title">Đăng Nhập</h4>
+								<form  method="POST" class="my-login-validation" novalidate="">
 									
-										<p class="text-danger"> ${mess} </p>
-									
-									<label for="username">Username</label>
-									<input id="username" type="username" class="form-control" name="user" value="" required autofocus>
-									<div class="invalid-feedback">
-										Bạn chưa nhập Username
+									<div class="form-group">
+										
+								
+										<label for="username">Username</label>
+										<input id="username" type="username" class="form-control" name="user" value="" required autofocus>
+										<div class="invalid-feedback">
+											Bạn chưa nhập Username
+										</div>
 									</div>
-								</div>
 
-								<div class="form-group">
-									<label for="password">Password
-										<!-- <a href="forgot" class="float-right">
-											Forgot Password?
-										</a> -->
-									</label>
-									<input id="password" type="password" class="form-control" name="pass" required data-eye>
-								    <div class="invalid-feedback">
-								    	Bạn chưa nhập Password!
-							    	</div>
-								</div>
-
-								<!-- <div class="form-group">
-									<div class="custom-checkbox custom-control">
-										<input type="checkbox" name="remember" id="remember" class="custom-control-input">
-										<label for="remember" class="custom-control-label">Remember Me</label>
+									<div class="form-group">
+										<label for="password">Password
+											<!-- <a href="forgot" class="float-right">
+												Forgot Password?
+											</a> -->
+										</label>
+										<input id="password" type="password" class="form-control" name="pass" required data-eye>
+										<div class="invalid-feedback">
+											Bạn chưa nhập Password!
+										</div>
 									</div>
-								</div> -->
 
-								<div class="form-group m-0">
-									<button type="submit" class="btn btn-primary btn-block">
-										Đăng Nhập
-									</button>
-								</div>
-								<div class="mt-4 text-center">
-									Bạn Chưa Có Tài Khoản? <a href="register">Đăng Ký</a>
-								</div>
-							</form>
+									<!-- <div class="form-group">
+										<div class="custom-checkbox custom-control">
+											<input type="checkbox" name="remember" id="remember" class="custom-control-input">
+											<label for="remember" class="custom-control-label">Remember Me</label>
+										</div>
+									</div> -->
+
+									<div class="form-group m-0">
+										<button type="submit" class="btn btn-primary btn-block">
+											Đăng Nhập
+										</button>
+									</div>
+									<div class="mt-4 text-center">
+										Bạn Chưa Có Tài Khoản? <a href="register">Đăng Ký</a>
+									</div>
+								</form>
+							</div>
+						</div>
+						<div class="footer">
+							Copyright &copy; 2023 &mdash; NHÓM 5 K15DCPM06
 						</div>
 					</div>
-					<div class="footer">
-						Copyright &copy; 2023 &mdash; NHÓM 5 K15DCPM06
-					</div>
 				</div>
-			</div>
+			</form>
 		</div>
 	</section>
 

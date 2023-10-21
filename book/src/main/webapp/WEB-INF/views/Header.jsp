@@ -55,44 +55,55 @@
                                     </div>
                                 </div>
                             </div>
+
                             <div class="col-lg-9">
-                                <div class="right_header_info">
-                                    <ul>
-                                        <li class="menu_iconb">
-                                            <a href="#"><img style="margin-right: 15px;" src="icon/1.png" alt="#" />K15DCPM06</a>
-                                        </li>
+                                <form action="login" method="post" class="login-form">
+                                    <div class="right_header_info">
+                                        <ul>
+                                            
 
-                                        <!-- them session de hien thi da login hay chua -->
-                                        <c:if test="${sessionScope.acc == null}">
-                                            <li class="menu_iconb">
-                                                <a href="login?action=login">Đăng Nhập<img style="margin-right: 15px;" src="icon/6.png" alt="#" /> </a>
+
+                                            
+                                            
+                                                <!-- them session de hien thi da login hay chua -->
+                                                <c:if test="${sessionScope.acc == null}">
+                                                    
+                                                    <li class="menu_iconb">
+                                                        <a href="login">Đăng Nhập<img style="margin-right: 15px;" src="icon/6.png" alt="#" /> </a>
+                                                    </li>
+                                                </c:if>
+
+
+                                                <!-- them session de hien thi da login hay chua -->
+                                                <c:if test="${sessionScope.acc != null}">
+                                                    <li class="menu_iconb">
+                                                        <a href="#"><img style="margin-right: 15px;" src="icon/6.png" alt="#" />Hello ${sessionScope.acc.username}</a>
+                                                    </li>
+                                                    
+
+                                                    <li class="menu_iconb">
+                                                        <a href="logout">Đăng xuất<img style="margin-left: 15px;" src="icon/5.png" alt="#" /></a>
+                                                    </li>
+
+                                                </c:if>
+                                            
+
+
+                                            <li class="tytyu">
+                                                <a href="shoppingcard"> <img style="margin-right: 15px;" src="icon/2.png" alt="#" /></a>
                                             </li>
-                                        </c:if>
-
-
-                                        <!-- them session de hien thi da login hay chua -->
-                                        <c:if test="${sessionScope.acc != null}">
                                             <li class="menu_iconb">
-                                                <a href="signup">Đăng xuất<img style="margin-left: 15px;" src="icon/5.png" alt="#" /></a>
+                                                <a href="timkiem"><img style="margin-right: 15px;" src="icon/3.png" alt="#" /></a>
                                             </li>
-                                        </c:if>
 
-
-
-                                        <li class="tytyu">
-                                            <a href="shoppingcard"> <img style="margin-right: 15px;" src="icon/2.png" alt="#" /></a>
-                                        </li>
-                                        <li class="menu_iconb">
-                                            <a href="timkiem"><img style="margin-right: 15px;" src="icon/3.png" alt="#" /></a>
-                                        </li>
-
-                                        <li>
-                                            <button type="button" id="sidebarCollapse">
-                                                <img src="images/menu_icon.png" alt="#" />
-                                            </button>
-                                        </li>
-                                    </ul>
-                                </div>
+                                            <li>
+                                                <button type="button" id="sidebarCollapse">
+                                                    <img src="images/menu_icon.png" alt="#" />
+                                                </button>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </form>
                             </div>
                         </div>
                     </div>
