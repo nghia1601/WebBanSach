@@ -9,7 +9,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Tables - SB Admin</title>
+        <title>Admin Page</title>
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
         <link href="css/styles.css" rel="stylesheet" />
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
@@ -28,7 +28,7 @@
                 </div>
             </form>
             <!-- Navbar-->
-            <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
+            <!-- <ul class="navbar-nav ms-auto ms-md-0 me-3 me-lg-4">
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" id="navbarDropdown" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"><i class="fas fa-user fa-fw"></i></a>
                     <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
@@ -38,7 +38,7 @@
                         <li><a class="dropdown-item" href="#!">Logout</a></li>
                     </ul>
                 </li>
-            </ul>
+            </ul> -->
         </nav>  
         <div id="layoutSidenav">
             <div id="layoutSidenav_nav">
@@ -52,13 +52,13 @@
                             </a>
 
                             <div class="sb-sidenav-menu-heading">Option</div>
-                            <a class="nav-link" href="charts.html">
+                            <a class="nav-link" href="userlist">
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                                 User List
                             </a>
-                            <a class="nav-link" href="table">
+                            <a class="nav-link" href="booklist">
                                 <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
-                                Products List
+                                Book List
                             </a>
                         </div>
                     </div>

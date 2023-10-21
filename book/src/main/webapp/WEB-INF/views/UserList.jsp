@@ -60,7 +60,7 @@
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4">Book List</h1>
+                        <h1 class="mt-4">User List</h1>
                         <ol class="breadcrumb mb-4">
                             <li class="breadcrumb-item"><a href="home">Home Page</a></li>
                             <li class="breadcrumb-item active">Tables</li>
@@ -69,47 +69,34 @@
                         <div class="card mb-4">
                             <div class="card-header">
                                 <i class="fas fa-table me-1"></i>
-                                Danh Sách Sản Phẩm
+                                Danh Sách Người Dùng
                             </div>
                             <div class="card-body">
                                 <table id="datatablesSimple">
                                     <thead>
                                         <tr>
-                                            <th>ID Sách</th>
-                                            <th>ID Loại</th>
-                                            <th>Tên Sách</th>
-                                            <th>Số Lượng</th>
-                                            <th>Loại Sách</th>
-                                            <th>Giá Sách</th>
-                                            <th>Mô Tả</th>
-                                            <th>Ảnh</th>
+                                            <th>ID Account</th>
+                                            <th>User Name</th>
+                                            <th>Pass Word</th>
+                                            <th>Is Admin</th>
                                         </tr>
                                     </thead>
                                     <tfoot>
                                         <tr>
-                                            <th>ID Sách</th>
-                                            <th>ID Loại</th>
-                                            <th>Tên Sách</th>
-                                            <th>Số Lượng</th>
-                                            <th>Loại Sách</th>
-                                            <th>Giá Sách</th>
-                                            <th>Mô Tả</th>
-                                            <th>Ảnh</th>
+                                            <th>ID Account</th>
+                                            <th>User Name</th>
+                                            <th>Pass Word</th>
+                                            <th>Is Admin</th>
                                         </tr>
                                     </tfoot>
                                     <tbody>
                                         <!-- <c:if test="${not empty list}"> -->
                                             <c:forEach var="p" items="${list}">
                                                 <tr>
-                                                    <td>${p.idSach}</td>
-                                                    <td>${p.idLoai}</td>
-                                                    <td>${p.tenSach}</td>
-                                                    <td>${p.soLuong}</td>
-                                                    <td>${p.loaiSach}</td>
-                                                    <td>${p.giaSach}</td>
-                                                    <td>${p.moTa}</td>
-                                                    <td>${p.image}</td>
-                                                    
+                                                    <td>${p.id}</td>
+                                                    <td>${p.username}</td>
+                                                    <td>${p.password}</td>
+                                                    <td>${p.isAdmin}</td> 
                                                 </tr>
                                             </c:forEach>
                                         <!-- </c:if> -->

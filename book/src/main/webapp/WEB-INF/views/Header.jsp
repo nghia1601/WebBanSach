@@ -63,13 +63,18 @@
                                             
 
 
-                                            
-                                            
+                                                <!-- hien icon admin khi dang nhap dung user acmin va co thẻ click vao de truy cap vao trang admin -->
+                                                <c:if test="${sessionScope.acc.isAdmin == 1}">
+                                                    <li class="menu_iconb">
+                                                        <a href="admin"><img style="margin-right: 15px;" src="icon/admin.png" alt="#" />Admin</a>
+                                                    </li>
+
+                                                </c:if>
                                                 <!-- them session de hien thi da login hay chua -->
                                                 <c:if test="${sessionScope.acc == null}">
                                                     
                                                     <li class="menu_iconb">
-                                                        <a href="login">Đăng Nhập<img style="margin-right: 15px;" src="icon/6.png" alt="#" /> </a>
+                                                        <a href="login"><img style="margin-right: 15px;" src="icon/6.png" alt="#" /> Đăng Nhập </a>
                                                     </li>
                                                 </c:if>
 
@@ -82,7 +87,7 @@
                                                     
 
                                                     <li class="menu_iconb">
-                                                        <a href="logout">Đăng xuất<img style="margin-left: 15px;" src="icon/5.png" alt="#" /></a>
+                                                        <a href="logout"><img style="margin-left: 15px;" src="icon/5.png" alt="#" /> Đăng xuất</a>
                                                     </li>
 
                                                 </c:if>

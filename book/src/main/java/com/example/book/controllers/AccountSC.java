@@ -1,6 +1,13 @@
 package com.example.book.controllers;
 
 import java.io.IOException;
+import java.sql.Connection;
+import java.util.List;
+
+import com.example.book.model.Account;
+import com.example.book.model.DBCrud;
+import com.example.book.model.MySQLConnector;
+
 
 import jakarta.servlet.RequestDispatcher;
 import jakarta.servlet.ServletException;
@@ -9,13 +16,24 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
-@WebServlet("/table")
-public class TableServletController extends HttpServlet{
+@WebServlet("/userlist")
+public class AccountSC extends HttpServlet{
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 
-        RequestDispatcher requestDispatcher = req.getRequestDispatcher("/WEB-INF/views/Table.jsp");
+        //ket noi CSDL MySQL
+        Connection conn = MySQLConnector.getMySQLConnection();
+        //lay tat ca Account 
+        List<Account> listP = DBCrud.getAllAccount(conn);
+        //dong ket noi
+        MySQLConnector.closeConnection(conn);
+
+        //dat danh sach acconut vao request
+        req.setAttribute("list", listP);
+
+        //chuyen sang servlet ProductListView.jsp
+        RequestDispatcher requestDispatcher = req.getRequestDispatcher("/WEB-INF/views/UserList.jsp");
         requestDispatcher.forward(req, resp);
     }
 

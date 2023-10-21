@@ -3,6 +3,7 @@ package com.example.book.model;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -94,10 +95,11 @@ public class DBCrud {
                 list.add(new Product(rs.getString(1),
                  rs.getString(2),
                   rs.getString(3),
-                   rs.getString(4),
-                    rs.getDouble(5),
-                     rs.getString(6),
-                      rs.getString(7)));
+                   rs.getInt(4),
+                    rs.getString(5),
+                     rs.getDouble(6),
+                      rs.getString(7),
+                       rs.getString(8)));
             }
 
         } catch (Exception e) {
@@ -144,10 +146,11 @@ public class DBCrud {
                 list.add(new Product(rs.getString(1),
                  rs.getString(2),
                   rs.getString(3),
-                   rs.getString(4),
-                    rs.getDouble(5),
-                     rs.getString(6),
-                      rs.getString(7)));
+                   rs.getInt(4),
+                    rs.getString(5),
+                     rs.getDouble(6),
+                      rs.getString(7),
+                       rs.getString(8)));
             }
 
         } catch (Exception e) {
@@ -172,10 +175,11 @@ public class DBCrud {
                 return new Product(rs.getString(1),
                  rs.getString(2),
                   rs.getString(3),
-                   rs.getString(4),
-                    rs.getDouble(5),
-                     rs.getString(6),
-                      rs.getString(7));
+                   rs.getInt(4),
+                    rs.getString(5),
+                     rs.getDouble(6),
+                      rs.getString(7),
+                       rs.getString(8));
             }
 
         } catch (Exception e) {
@@ -183,14 +187,14 @@ public class DBCrud {
         }
         return null;
     }
-}
 
 
 
 
-    /*public static List<Product> getAllProduct(Connection conn){
+    //lay thong tin sach va win ra list
+    public static List<Product> getAllProduct(Connection conn){
         List<Product> productList = null;
-        String sql = "SELECT * FROM product";
+        String sql = "SELECT * FROM book";
         PreparedStatement ps = null;
         ResultSet rs = null;
         productList = new ArrayList<>();
@@ -201,11 +205,17 @@ public class DBCrud {
             rs = ps.executeQuery();
             //chuyen ResultSet sang List<Product>
             while(rs.next()){
-                String code = rs.getString("code");
-                String name = rs.getString("name");
-                double price = rs.getDouble("price");
+                String idSach = rs.getString("idSach");
+                String idLoai = rs.getString("idLoai");
+                String tenSach = rs.getString("tenSach");
+                int soLuong = rs.getInt("soLuong");
+                String loaiSach = rs.getString("loaiSach");
+                Double giaSach = rs.getDouble("giaSach");
+                String moTa = rs.getString("moTa");
+                String image = rs.getString("image");
 
-                Product product = new Product(code, name, price);
+
+                Product product = new Product(idSach, idLoai, tenSach, soLuong, loaiSach, giaSach, moTa, image);
                 productList.add(product);
 
             }
@@ -219,9 +229,45 @@ public class DBCrud {
 
 
     }
-    
 
-    public static void addProduct(Connection conn, Product product){
+
+    //lay thong tin user va win ra list
+    public static List<Account> getAllAccount(Connection conn){
+        List<Account> accountList = null;
+        String sql = "SELECT * FROM account";
+        PreparedStatement ps = null;
+        ResultSet rs = null;
+        accountList = new ArrayList<>();
+
+        //code
+        try {
+            ps = conn.prepareStatement(sql);
+            rs = ps.executeQuery();
+            //chuyen ResultSet sang List<Product>
+            while(rs.next()){
+                int id = rs.getInt("id");
+                String user = rs.getString("username");
+                String pass = rs.getString("password");
+                int isAdmin = rs.getInt("isAdmin");
+                
+
+
+                Account account = new Account(id, user, pass, isAdmin);
+                accountList.add(account);
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+
+
+        return accountList;
+
+
+    }
+    
+}
+    /*public static void addProduct(Connection conn, Product product){
 
         //cau lenh sql - insert vao csdl
         String sql = "insert into product (code, name, price) values(?, ?, ?)";
