@@ -70,6 +70,9 @@
                             <div class="card-header">
                                 <i class="fas fa-table me-1"></i>
                                 Danh Sách Người Dùng
+
+                                
+
                             </div>
                             <div class="card-body">
                                 <table id="datatablesSimple">
@@ -79,6 +82,7 @@
                                             <th>User Name</th>
                                             <th>Pass Word</th>
                                             <th>Is Admin</th>
+                                            <th>Chức Năng</th>
                                         </tr>
                                     </thead>
                                     <tfoot>
@@ -87,6 +91,7 @@
                                             <th>User Name</th>
                                             <th>Pass Word</th>
                                             <th>Is Admin</th>
+                                            <th>Chức Năng</th>
                                         </tr>
                                     </tfoot>
                                     <tbody>
@@ -97,6 +102,9 @@
                                                     <td>${p.username}</td>
                                                     <td>${p.password}</td>
                                                     <td>${p.isAdmin}</td> 
+                                                    <td><button type="button" class="btn btn-primary">Thêm</button>
+                                                        <button type="button" class="btn btn-primary">Xóa</button>
+                                                        <button type="button" class="btn btn-primary">Sửa</button></td>
                                                 </tr>
                                             </c:forEach>
                                         <!-- </c:if> -->

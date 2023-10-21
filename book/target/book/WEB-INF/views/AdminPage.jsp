@@ -70,6 +70,8 @@
                             <div class="card-header">
                                 <i class="fas fa-table me-1"></i>
                                 Danh Sách Sản Phẩm
+
+                                
                             </div>
                             <div class="card-body">
                                 <table id="datatablesSimple">
@@ -83,6 +85,7 @@
                                             <th>Giá Sách</th>
                                             <th>Mô Tả</th>
                                             <th>Ảnh</th>
+                                            <th>Chức Năng</th>
                                         </tr>
                                     </thead>
                                     <tfoot>
@@ -94,8 +97,7 @@
                                             <th>Loại Sách</th>
                                             <th>Giá Sách</th>
                                             <th>Mô Tả</th>
-                                            <th>Ảnh</th>
-                                        </tr>
+                                            <th>Chức Năng</th>
                                     </tfoot>
                                     <tbody>
                                         <!-- <c:if test="${not empty list}"> -->
@@ -109,6 +111,10 @@
                                                     <td>${p.giaSach}</td>
                                                     <td>${p.moTa}</td>
                                                     <td>${p.image}</td>
+                                                    <td><button type="button" class="btn btn-primary">Thêm</button>
+                                                        <button type="button" class="btn btn-primary">Xóa</button>
+                                                        <button type="button" class="btn btn-primary">Sửa</button></td>
+
                                                     
                                                 </tr>
                                             </c:forEach>
