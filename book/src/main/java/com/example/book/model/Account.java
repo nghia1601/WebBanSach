@@ -38,7 +38,7 @@ public class Account {
 
 
     public Account(int id, String username, String password, int isAdmin) {
-        this.id = id;
+        //this.id = id;
         this.username = username;
         this.password = password;
         this.isAdmin = isAdmin;

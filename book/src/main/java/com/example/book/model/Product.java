@@ -5,7 +5,7 @@ public class Product {
     private String idLoai;
     private String tenSach;
     private int soLuong;
-    private String loaiSach;
+    
     private double giaSach;
     private String moTa;
     private String image;
@@ -14,13 +14,13 @@ public class Product {
 
     }
 
-    public Product(String idSach, String idLoai, String tenSach, int soLuong, String loaiSach, double giaSach,
+    public Product(String idSach, String idLoai, String tenSach, int soLuong, double giaSach,
         String moTa, String image) {
         this.idSach = idSach;
         this.idLoai = idLoai;
         this.tenSach = tenSach;
         this.soLuong = soLuong;
-        this.loaiSach = loaiSach;
+        
         this.giaSach = giaSach;
         this.moTa = moTa;
         this.image = image;
@@ -60,13 +60,7 @@ public class Product {
         this.soLuong = soLuong;
     }
 
-    public String getLoaiSach() {
-        return loaiSach;
-    }
-
-    public void setLoaiSach(String loaiSach) {
-        this.loaiSach = loaiSach;
-    }
+    
 
     public double getGiaSach() {
         return giaSach;
@@ -94,7 +88,7 @@ public class Product {
     @Override
     public String toString() {
         return "Product [idSach=" + idSach + ", idLoai=" + idLoai + ", tenSach=" + tenSach + ", soLuong=" + soLuong
-                + ", loaiSach=" + loaiSach + ", giaSach=" + giaSach + ", moTa=" + moTa + ", image=" + image + "]";
+                + ", loaiSach=" +  ", giaSach=" + giaSach + ", moTa=" + moTa + ", image=" + image + "]";
     }
 
     

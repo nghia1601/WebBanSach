@@ -70,6 +70,7 @@
                             <div class="card-header">
                                 <i class="fas fa-table me-1"></i>
                                 Danh Sách Sản Phẩm
+                                <a href="add" type="button" class="btn btn-primary">Thêm Book </a>
 
                                 
                             </div>
@@ -81,7 +82,6 @@
                                             <th>ID Loại</th>
                                             <th>Tên Sách</th>
                                             <th>Số Lượng</th>
-                                            <th>Loại Sách</th>
                                             <th>Giá Sách</th>
                                             <th>Mô Tả</th>
                                             <th>Ảnh</th>
@@ -94,7 +94,6 @@
                                             <th>ID Loại</th>
                                             <th>Tên Sách</th>
                                             <th>Số Lượng</th>
-                                            <th>Loại Sách</th>
                                             <th>Giá Sách</th>
                                             <th>Mô Tả</th>
                                             <th>Chức Năng</th>
@@ -107,13 +106,12 @@
                                                     <td>${p.idLoai}</td>
                                                     <td>${p.tenSach}</td>
                                                     <td>${p.soLuong}</td>
-                                                    <td>${p.loaiSach}</td>
                                                     <td>${p.giaSach}</td>
                                                     <td>${p.moTa}</td>
-                                                    <td>${p.image}</td>
-                                                    <td><button type="button" class="btn btn-primary">Thêm</button>
-                                                        <button type="button" class="btn btn-primary">Xóa</button>
-                                                        <button type="button" class="btn btn-primary">Sửa</button></td>
+                                                    <td><img src="${p.image}"></td>
+                                                    <td>
+                                                        <a href="delete?pid=${p.idSach}" type="button" class="btn btn-primary">Xóa</a>
+                                                        <a type="button" class="btn btn-primary">Sửa</a></td>
 
                                                     
                                                 </tr>

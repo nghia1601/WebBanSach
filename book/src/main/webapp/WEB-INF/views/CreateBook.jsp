@@ -60,58 +60,52 @@
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4">User List</h1>
+                        <h1 class="mt-4">Book List</h1>
                         <ol class="breadcrumb mb-4">
                             <li class="breadcrumb-item"><a href="home">Home Page</a></li>
                             <li class="breadcrumb-item active">Tables</li>
                         </ol>
-                        
-                        <div class="card mb-4">
-                            <div class="card-header">
-                                <i class="fas fa-table me-1"></i>
-                                Danh Sách Người Dùng
-
+                        <form action="add" method="post">
+                            <table>
+                                <tr>
+                                    <td>ID Sách: </td>
+                                    <td><input type="text" name="idSach"></td>
+                                </tr>
                                 
-
-                            </div>
-                            <div class="card-body">
-                                <table id="datatablesSimple">
-                                    <thead>
-                                        <tr>
-                                            <th>ID Account</th>
-                                            <th>User Name</th>
-                                            <th>Pass Word</th>
-                                            <th>Is Admin</th>
-                                            <th>Chức Năng</th>
-                                        </tr>
-                                    </thead>
-                                    <tfoot>
-                                        <tr>
-                                            <th>ID Account</th>
-                                            <th>User Name</th>
-                                            <th>Pass Word</th>
-                                            <th>Is Admin</th>
-                                            <th>Chức Năng</th>
-                                        </tr>
-                                    </tfoot>
-                                    <tbody>
-                                        <!-- <c:if test="${not empty list}"> -->
-                                            <c:forEach var="p" items="${list}">
-                                                <tr>
-                                                    <td>${p.id}</td>
-                                                    <td>${p.username}</td>
-                                                    <td>${p.password}</td>
-                                                    <td>${p.isAdmin}</td> 
-                                                    <td><button type="button" class="btn btn-primary">Thêm</button>
-                                                        <button type="button" class="btn btn-primary">Xóa</button>
-                                                        <button type="button" class="btn btn-primary">Sửa</button></td>
-                                                </tr>
-                                            </c:forEach>
-                                        <!-- </c:if> -->
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
+                                <tr>
+                                    <td>Tên Sách</td>
+                                    <td><input type="text" name="tenSach"></td>
+                                </tr>
+                                
+                                <tr>
+                                    
+                                    
+                                    <label>Chọn Loại Sách: </label>
+                                    <select name="idLoai" >
+                                        <c:forEach items="${listC}" var="c">
+                                            <option value="${c.idLoai}">${c.tenLoai}</option>
+                                        </c:forEach>
+                                    </select>
+                                
+                                </tr>
+                                <tr>
+                                    <td>Giá Sách</td>
+                                    <td><input type="text" name="giaSach"></td>
+                                </tr>
+                                <tr>
+                                    <td>Mô Tả</td>
+                                    <td><input type="text" name="moTa"></td>
+                                </tr>
+                                <tr>
+                                    <td>Hình Ảnh</td>
+                                    <td><input type="text" name="image"></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="submit" value="Save"></td>
+                                    <td><a href="admin">Cancel</a></td>
+                                </tr>
+                            </table>
+                        </form>
                     </div>
                 </main>
                 <footer class="py-4 bg-light mt-auto">

@@ -20,6 +20,9 @@ public class AdminServletController extends HttpServlet{
 
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        
+        
+
 
         //ket noi CSDL MySQL
         Connection conn = MySQLConnector.getMySQLConnection();

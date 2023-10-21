@@ -19,7 +19,7 @@ public class DBCrud {
 
     //dang nhap
     public Account login(String user, String pass) {
-        String sql = "SELECT * FROM account WHERE user = ? AND pass = ?";
+        String sql = "SELECT * FROM account WHERE username = ? AND password = ?";
 
         try {
             new MySQLConnector();
@@ -43,7 +43,7 @@ public class DBCrud {
 
     //checkAccount: tra cuu username xem da co trong db chua
     public Account checkAccountExit(String user) {
-        String sql = "SELECT * FROM account WHERE user = ?";
+        String sql = "SELECT * FROM account WHERE username = ?";
 
         try {
             new MySQLConnector();
@@ -96,10 +96,10 @@ public class DBCrud {
                  rs.getString(2),
                   rs.getString(3),
                    rs.getInt(4),
-                    rs.getString(5),
-                     rs.getDouble(6),
-                      rs.getString(7),
-                       rs.getString(8)));
+                    
+                     rs.getDouble(5),
+                      rs.getString(6),
+                       rs.getString(7)));
             }
 
         } catch (Exception e) {
@@ -147,10 +147,10 @@ public class DBCrud {
                  rs.getString(2),
                   rs.getString(3),
                    rs.getInt(4),
-                    rs.getString(5),
-                     rs.getDouble(6),
-                      rs.getString(7),
-                       rs.getString(8)));
+                    
+                     rs.getDouble(5),
+                      rs.getString(6),
+                       rs.getString(7)));
             }
 
         } catch (Exception e) {
@@ -176,10 +176,10 @@ public class DBCrud {
                  rs.getString(2),
                   rs.getString(3),
                    rs.getInt(4),
-                    rs.getString(5),
-                     rs.getDouble(6),
-                      rs.getString(7),
-                       rs.getString(8));
+                    
+                     rs.getDouble(5),
+                      rs.getString(6),
+                       rs.getString(7));
             }
 
         } catch (Exception e) {
@@ -209,13 +209,13 @@ public class DBCrud {
                 String idLoai = rs.getString("idLoai");
                 String tenSach = rs.getString("tenSach");
                 int soLuong = rs.getInt("soLuong");
-                String loaiSach = rs.getString("loaiSach");
+                
                 Double giaSach = rs.getDouble("giaSach");
                 String moTa = rs.getString("moTa");
                 String image = rs.getString("image");
 
 
-                Product product = new Product(idSach, idLoai, tenSach, soLuong, loaiSach, giaSach, moTa, image);
+                Product product = new Product(idSach, idLoai, tenSach, soLuong, giaSach, moTa, image);
                 productList.add(product);
 
             }
@@ -243,7 +243,7 @@ public class DBCrud {
         try {
             ps = conn.prepareStatement(sql);
             rs = ps.executeQuery();
-            //chuyen ResultSet sang List<Product>
+            //chuyen ResultSet sang List<Account>
             while(rs.next()){
                 int id = rs.getInt("id");
                 String user = rs.getString("username");
@@ -265,8 +265,89 @@ public class DBCrud {
 
 
     }
-    
+
+
+    //them sach moi vao db
+    public  void addBook(String idSach, String idLoai, String tenSach, String giaSach, String moTa, String image){
+
+        //cau lenh sql - insert vao csdl
+        String sql = "INSERT INTO book (idSach, idLoai, tenSach, giaSach, moTa, image) VALUES (?, ?, ?, ?, ?, ?);" ;
+        
+
+        try {
+            new MySQLConnector();
+            conn = MySQLConnector.getMySQLConnection();
+            ps = conn.prepareStatement(sql);
+
+            ps.setString(1, idSach);
+            ps.setString(2, idLoai);
+            ps.setString(3, tenSach);
+            ps.setString(4, giaSach);
+            ps.setString(5, moTa);
+            ps.setString(6, image);
+
+            ps.executeUpdate();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        
+
+    }
+
+    //delete book
+    public void deleteProduct(String pid) {
+        String query = "delete from book where idSach = ?";
+            try {
+                
+                conn = MySQLConnector.getMySQLConnection();
+                ps = conn.prepareStatement(query);
+                ps.setString(1, pid);
+                ps.executeUpdate();
+            } catch (Exception e) {
+                // TODO: handle exception
+            }
+    }
+
+
+
+
+
+
+   
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     /*public static void addProduct(Connection conn, Product product){
 
         //cau lenh sql - insert vao csdl
