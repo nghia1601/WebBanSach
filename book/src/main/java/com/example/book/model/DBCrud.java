@@ -422,9 +422,33 @@ public class DBCrud {
 
 
 
+    //tim sach theo name
+    public List<Product> getBookByName(String txtSearch) {
+        List<Product> list = new ArrayList<>();
+        String query = " select * from book where tenSach like ? ";
+        try {
+            new MySQLConnector();
+            conn = MySQLConnector.getMySQLConnection();
+            ps = conn.prepareStatement(query);
+            ps.setString(1, "%" + txtSearch + "%");
+            rs = ps.executeQuery();
+            while(rs.next()) {
+                list.add(new Product(rs.getString(1),
+                 rs.getString(2),
+                  rs.getString(3),
+                     rs.getDouble(4),
+                      rs.getString(5),
+                       rs.getString(6)));
+            }
 
-   
+        } catch (Exception e) {
+            // TODO: handle exception
+        }
+        return list;
+    }
 }
+   
+
 
 
 

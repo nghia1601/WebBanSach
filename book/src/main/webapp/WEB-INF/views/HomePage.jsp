@@ -137,12 +137,7 @@
                                     <li><a href="#tamly">Tâm Lý</a></li>
                                     <li><a href="product">Xem Thêm</a></li>
                                     
-                                    <!--li class="active"><a href="#">Clothing</a></!--li-->
-                                    <!--li><a href="#">Electronics</a></!--li-->
-                                    <!--li><a href="#">Watches</a></!--li-->
-                                    <!--li><a href="#">Health and Beauty</a></!--li-->
-                                    <!--li><a href="#">Sports</a></!--li-->
-                                    <!--li><a href="#">Home and Garden</a></!--li-->
+                                    
                                 </ul>
                             </div>
                         </div>
@@ -154,11 +149,10 @@
                         <div class="row">
                             <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 margintop">
                                 <div class="brand-box">
-                                    <h5>Sale</h5>
-                                    <i><img src="images/codethieunhi.png"/>       
-                                </i>
+                                    <h5>Best Saler</h5>
+                                    <i><img src="images/codethieunhi.png"/></i>
                                     <h4><a href="detail?pid=SC01">300 Bài Code TNH</a></h4>
-                                    <h4>Giá :<span class="nolmal">100$</span></h4>
+                                    <!-- <h4>Giá :<span class="nolmal">100$</span></h4> -->
 
                                 </div>
                                 <a class="buynow" href="#">Add To Card</a>
@@ -167,7 +161,8 @@
                             <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 margintop">
                                 <div class="brand-box">
                                     <i><img src="images/javacode.png"/></i>
-                                    <h4>Giá :<span class="nolmal">100$</span></h4>
+                                    <h4><a href="detail?pid=SC03">Code Java</a></h4>
+                                    <!-- <h4>Giá :<span class="nolmal">100$</span></h4> -->
                                 </div>
                                 <a class="buynow" href="#">Add To Card</a>
                                 <a class="buynow" href="#">Buy now</a>
@@ -175,7 +170,8 @@
                             <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
                                 <div class="brand-box">
                                     <i><img src="images/codecss.png"/></i>
-                                    <h4>Giá :<span class="nolmal">100$</span></h4>
+                                    <h4><a href="detail?pid=SC02">Code Css</a></h4>
+                                    <!-- <h4>Giá :<span class="nolmal">100$</span></h4> -->
                                 </div>
                                 <a class="buynow" href="#">Add To Card</a>
                                 <a class="buynow" href="#">Buy now</a>
@@ -183,7 +179,8 @@
                             <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
                                 <div class="brand-box">
                                     <i><img src="images/codepython.png"/></i>
-                                    <h4>Giá :<span class="nolmal">100$</span></h4>
+                                    <h4><a href="detail?pid=SC04">Code Python</a></h4>
+                                    <!-- <h4>Giá :<span class="nolmal">100$</span></h4> -->
                                 </div>
                                 <a class="buynow" href="#">Add To Card</a>
                                 <a class="buynow" href="#">Buy now</a>
@@ -199,10 +196,11 @@
                         <div class="row">
                             <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 margintop">
                                 <div class="shoes-box">
-                                    <h5>Sale</h5>
+                                    <h5>Best Saler</h5>
                                     <i><img src="images/bogia.png"/>
                                 </i>
-                                    <h4>Giá :<span class="nolmal">100</span></h4>
+                                <h4><a href="detail?pid=TTH01">Bố Già</a></h4>
+                                    <!-- <h4>Giá :<span class="nolmal">100</span></h4> -->
 
                                 </div>
                                 <a class="buynow" href="#">Add To Card</a>
@@ -211,7 +209,8 @@
                             <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 margintop">
                                 <div class="shoes-box">
                                     <i><img src="images/nhungnguoikhonkho.png"/></i>
-                                    <h4>Giá :<span class="nolmal">100</span></h4>
+                                    <h4><a href="detail?pid=TTH02">Những Con Người Khốn Khổ</a></h4>
+                                    <!-- <h4>Giá :<span class="nolmal">100</span></h4> -->
                                 </div>
                                 <a class="buynow" href="#">Add To Card</a>
                                 <a class="buynow" href="#">Buy now</a>
@@ -219,7 +218,8 @@
                             <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
                                 <div class="shoes-box">
                                     <i><img src="images/thep.png"/></i>
-                                    <h4>Giá :<span class="nolmal">100</span></h4>
+                                    <h4><a href="detail?pid=TTH03">Thép Đã Tôi Thế Đấy</a></h4>
+                                    <!-- <h4>Giá :<span class="nolmal">100</span></h4> -->
                                 </div>
                                 <a class="buynow" href="#">Add To Card</a>
                                 <a class="buynow" href="#">Buy now</a>
@@ -227,7 +227,8 @@
                             <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
                                 <div class="shoes-box">
                                     <i><img src="images/tramnamcodon.png"/></i>
-                                    <h4>Giá :<span class="nolmal">100</span></h4>
+                                    <h4><a href="detail?pid=TTH04">Trăm Năm Cô Đơn</a></h4>
+                                    <!-- <h4>Giá :<span class="nolmal">100</span></h4> -->
                                 </div>
                                 <a class="buynow" href="#">Add To Card</a>
                                 <a class="buynow" href="#">Buy now</a>
@@ -254,10 +255,11 @@
                     <div class="row">
                         <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 margintop">
                             <div class="Jewellery-box">
-                                <h5>Sale</h5>
+                                <h5>Best Saler</h5>
                                 <i><img src="images/wild.png"/>
                                 </i>
-                                <h4>Giá :<span class="nolmal">100</span></h4>
+                                <h4><a href="detail?pid=TT02">Wild</a></h4>
+                                <!-- <h4>Giá :<span class="nolmal">100</span></h4> -->
 
                             </div>
                             <a class="buynow" href="#">Add To Card</a>
@@ -266,7 +268,8 @@
                         <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 margintop">
                             <div class="Jewellery-box">
                                 <i><img src="images/tesla.png"/></i>
-                                <h4>Giá :<span class="nolmal">100</span></h4>
+                                <h4><a href="detail?pid=TT01">Cuộc Đời Kỳ Lạ Của Nikolas Tesla</a></h4>
+                                <!-- <h4>Giá :<span class="nolmal">100</span></h4> -->
                             </div>
                             <a class="buynow" href="#">Add To Card</a>
                             <a class="buynow" href="#">Buy now</a>
@@ -274,7 +277,8 @@
                         <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
                             <div class="Jewellery-box">
                                 <i><img src="images/12namnole.png"/></i>
-                                <h4>Giá :<span class="nolmal">100</span></h4>
+                                <h4><a href="detail?pid=TT03">12 Năm Nô Lệ</a></h4>
+                                <!-- <h4>Giá :<span class="nolmal">100</span></h4> -->
                             </div>
                             <a class="buynow" href="#">Add To Card</a>
                             <a class="buynow" href="#">Buy now</a>
@@ -282,7 +286,8 @@
                         <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
                             <div class="Jewellery-box">
                                 <i><img src="images/nhatky.png"/></i>
-                                <h4>Giá :<span class="nolmal">100</span></h4>
+                                <h4><a href="detail?pid=TT04">Nhật Ký CHEGUEVARA</a></h4>
+                                <!-- <h4>Giá :<span class="nolmal">100</span></h4> -->
                             </div>
                             <a class="buynow" href="#">Add To Card</a>
                             <a class="buynow" href="#">Buy now</a>
@@ -304,10 +309,11 @@
                     <div class="row">
                         <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 margintop">
                             <div class="Jewellery-box">
-                                <h5>Sale</h5>
+                                <h5>Best Saler</h5>
                                 <i><img src="images/dacnhantamnho.png"/>
                                 </i>
-                                <h4>Giá :<span class="nolmal">100</span></h4>
+                                <h4><a href="detail?pid=TL01">Đắc Nhân Tâm</a></h4>
+                                <!-- <h4>Giá :<span class="nolmal">100</span></h4> -->
 
                             </div>
                             <a class="buynow" href="#">Add To Card</a>
@@ -316,7 +322,8 @@
                         <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 margintop">
                             <div class="Jewellery-box">
                                 <i><img src="images/tamlyhoc.png"/></i>
-                                <h4>Giá :<span class="nolmal">100</span></h4>
+                                <h4><a href="detail?pid=TL03">Tâm Lý Học</a></h4>
+                                <!-- <h4>Giá :<span class="nolmal">100</span></h4> -->
                             </div>
                             <a class="buynow" href="#">Add To Card</a>
                             <a class="buynow" href="#">Buy now</a>
@@ -324,7 +331,8 @@
                         <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
                             <div class="Jewellery-box">
                                 <i><img src="images/bucxuc.png"/></i>
-                                <h4>Giá :<span class="nolmal">100</span></h4>
+                                <h4><a href="detail?pid=TL04">Bức Xúc Không Làm Ta Vô Can</a></h4>
+                                <!-- <h4>Giá :<span class="nolmal">100</span></h4> -->
                             </div>
                             <a class="buynow" href="#">Add To Card</a>
                             <a class="buynow" href="#">Buy now</a>
@@ -332,7 +340,8 @@
                         <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12">
                             <div class="Jewellery-box">
                                 <i><img src="images/tuduy.png"/></i>
-                                <h4>Giá :<span class="nolmal">100</span></h4>
+                                <h4><a href="detail?pid=TL02">Tư Duy Nhanh Và Chậm</a></h4>
+                                <!-- <h4>Giá :<span class="nolmal">100</span></h4> -->
                             </div>
                             <a class="buynow" href="#">Add To Card</a>
                             <a class="buynow" href="#">Buy now</a>

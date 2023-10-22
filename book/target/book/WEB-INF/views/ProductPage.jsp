@@ -53,7 +53,7 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="title">
-                                <h2> Thể Loại </h2>
+                                <h2> Thể Loại </h2> 
                                 <ul class="categiri">
                                     <c:forEach items="${listC}" var="o">
                                         
@@ -64,16 +64,21 @@
                             </div>
                         </div>
                     </div>
-                    
-                    
+
+                    <form action="search" method="post">
+                        <!-- tim kiem -->
+                        <input type="search" placeholder="Search..." id="gsearch" name="txt">
+                        <input type="submit">
+                    </form> 
+
                     <div id="sachcode"  class="brand-bg">
-                        <!-- <h3>Sách Code </h3> -->
-                        
                         <div class="row">
+                            
                             <c:forEach items="${listP}" var="p">
                             <div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 margintop">
-                                <div class="brand-box">
 
+                                <div class="brand-box">
+                                    
                                     
                                         
                                         <i><img src="${p.image}"/></i>

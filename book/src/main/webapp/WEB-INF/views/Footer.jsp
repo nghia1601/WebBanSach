@@ -41,7 +41,7 @@
                                     <li>
                                         <a href="#"><img src="icon/call.png" alt="#" /></a> K15DCPM06 </li>
                                     <li>
-                                        <a href="#"><img src="icon/email.png" alt="#" /></a>NHOM7@gmail.com </li>
+                                        <a href="#"><img src="icon/email.png" alt="#" /></a>NHOM5@gmail.com </li>
 
                                 </ul>
 
