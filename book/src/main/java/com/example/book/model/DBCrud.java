@@ -95,12 +95,11 @@ public class DBCrud {
                 list.add(new Product(rs.getString(1),
                  rs.getString(2),
                   rs.getString(3),
-                   rs.getInt(4),
-                    
-                     rs.getDouble(5),
-                      rs.getString(6),
-                       rs.getString(7)));
+                     rs.getDouble(4),
+                      rs.getString(5),
+                       rs.getString(6)));
             }
+
 
         } catch (Exception e) {
             // TODO: handle exception
@@ -146,11 +145,9 @@ public class DBCrud {
                 list.add(new Product(rs.getString(1),
                  rs.getString(2),
                   rs.getString(3),
-                   rs.getInt(4),
-                    
-                     rs.getDouble(5),
-                      rs.getString(6),
-                       rs.getString(7)));
+                     rs.getDouble(4),
+                      rs.getString(5),
+                       rs.getString(6)));
             }
 
         } catch (Exception e) {
@@ -175,11 +172,9 @@ public class DBCrud {
                 return new Product(rs.getString(1),
                  rs.getString(2),
                   rs.getString(3),
-                   rs.getInt(4),
-                    
-                     rs.getDouble(5),
-                      rs.getString(6),
-                       rs.getString(7));
+                     rs.getDouble(4),
+                      rs.getString(5),
+                       rs.getString(6));
             }
 
         } catch (Exception e) {
@@ -208,14 +203,12 @@ public class DBCrud {
                 String idSach = rs.getString("idSach");
                 String idLoai = rs.getString("idLoai");
                 String tenSach = rs.getString("tenSach");
-                int soLuong = rs.getInt("soLuong");
-                
                 Double giaSach = rs.getDouble("giaSach");
                 String moTa = rs.getString("moTa");
                 String image = rs.getString("image");
 
 
-                Product product = new Product(idSach, idLoai, tenSach, soLuong, giaSach, moTa, image);
+                Product product = new Product(idSach, idLoai, tenSach, giaSach, moTa, image);
                 productList.add(product);
 
             }
@@ -253,6 +246,7 @@ public class DBCrud {
 
 
                 Account account = new Account(id, user, pass, isAdmin);
+                
                 accountList.add(account);
             }
 
@@ -310,6 +304,121 @@ public class DBCrud {
     }
 
 
+    //update book
+    public void editBook(String idSach, String idLoai, String tenSach, String giaSach, String moTa, String image) {
+        String sql = "update book set  idLoai = ?, tenSach = ?, giaSach = ?, moTa = ?, image = ? where idSach = ?";
+    
+        try {
+            conn = MySQLConnector.getMySQLConnection(); // Gọi phương thức tĩnh từ tên lớp
+            ps = conn.prepareStatement(sql);
+            
+            
+            ps.setString(1, idLoai);
+            ps.setString(2, tenSach);
+            ps.setString(3, giaSach);
+            ps.setString(4, moTa);
+            ps.setString(5, image);
+            ps.setString(6, idSach);
+            ps.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+    
+    
+    
+
+
+
+    //them account moi vao db
+    public  void addUser( String username, String password, String isAdmin){
+
+        //cau lenh sql - insert vao csdl
+        String sql = "INSERT INTO account (username, password, isAdmin) VALUES (?, ?, ?);" ;
+        
+
+        try {
+            new MySQLConnector();
+            conn = MySQLConnector.getMySQLConnection();
+            ps = conn.prepareStatement(sql);
+
+            ps.setString(1, username);
+            ps.setString(2, password);
+            ps.setString(3, isAdmin);
+            
+
+            ps.executeUpdate();
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        
+
+    }
+
+    //delete user
+    public void deleteUser(String did) {
+        String query = "delete from account where id = ?";
+            try {
+                
+                conn = MySQLConnector.getMySQLConnection();
+                ps = conn.prepareStatement(query);
+                ps.setString(1, did);
+                ps.executeUpdate();
+            } catch (Exception e) {
+                // TODO: handle exception
+            }
+    }
+
+
+    //tim user theo ID user
+    public Account getfindUserByID(String id) {
+        
+        String query = "select * from account where id = ? ";
+        try {
+            new MySQLConnector();
+            conn = MySQLConnector.getMySQLConnection();
+            ps = conn.prepareStatement(query);
+            ps.setString(1, id);
+            rs = ps.executeQuery();
+            while(rs.next()) {
+                return new Account(rs.getInt(1),
+                 rs.getString(2),
+                  rs.getString(3),
+                   rs.getInt(4));
+            }
+
+        } catch (Exception e) {
+            // TODO: handle exception
+        }
+        return null;
+    }
+
+
+
+
+    
+
+
+    //update account
+    public void editUser(String id, String username, String password, String isAdmin) {
+        String sql = "UPDATE account SET username = ?, password = ?, isAdmin = ? WHERE id = ?";
+    
+        try {
+            conn = MySQLConnector.getMySQLConnection(); // Gọi phương thức tĩnh từ tên lớp
+            ps = conn.prepareStatement(sql);
+            
+            
+            
+            ps.setString(1, username);
+            ps.setString(2, password);
+            ps.setString(3, isAdmin);
+            ps.setString(4, id);
+            ps.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 
 
 

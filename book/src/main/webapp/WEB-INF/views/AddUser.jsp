@@ -45,7 +45,7 @@
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                                 User List
                             </a>
-                            <a class="nav-link" href="booklist">
+                            <a class="nav-link" href="admin">
                                 <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                                 Book List
                             </a>
@@ -60,49 +60,32 @@
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4">Book List</h1>
+                        <h1 class="mt-4">User Edit</h1>
                         <ol class="breadcrumb mb-4">
                             <li class="breadcrumb-item"><a href="home">Home Page</a></li>
-                            <li class="breadcrumb-item active">Tables</li>
+                            <li class="breadcrumb-item active"></li>
                         </ol>
-                        <form action="add" method="post">
+                        <form action="adduser" method="post">
                             <table>
+
                                 <tr>
-                                    <td>ID Sách: </td>
-                                    <td><input type="text" name="idSach"></td>
+                                    <td>Username</td>
+                                    <td><input type="text" name="username"></td>
                                 </tr>
                                 
-                                <tr>
-                                    <td>Tên Sách</td>
-                                    <td><input type="text" name="tenSach"></td>
-                                </tr>
                                 
                                 <tr>
-                                    
-                                    
-                                    <label>Chọn Loại Sách: </label>
-                                    <select name="idLoai" >
-                                        <c:forEach items="${listC}" var="c">
-                                            <option value="${c.idLoai}">${c.tenLoai}</option>
-                                        </c:forEach>
-                                    </select>
+                                    <td>Password</td>
+                                    <td><input type="text" name="password"></td>
+                                </tr>
+                                <tr>
+                                    <td>IsAdmin</td>
+                                    <td><input type="text" name="isAdmin"></td>
+                                </tr>
                                 
-                                </tr>
-                                <tr>
-                                    <td>Giá Sách</td>
-                                    <td><input type="text" name="giaSach"></td>
-                                </tr>
-                                <tr>
-                                    <td>Mô Tả</td>
-                                    <td><input type="text" name="moTa"></td>
-                                </tr>
-                                <tr>
-                                    <td>Hình Ảnh</td>
-                                    <td><input type="text" name="image"></td>
-                                </tr>
                                 <tr>
                                     <td><input type="submit" value="Save"></td>
-                                    <td><a href="admin">Cancel</a></td>
+                                    <td><a href="userlist">Cancel</a></td>
                                 </tr>
                             </table>
                         </form>

@@ -65,60 +65,34 @@
                             <li class="breadcrumb-item"><a href="home">Home Page</a></li>
                             <li class="breadcrumb-item active">Tables</li>
                         </ol>
-                        
-                        <div class="card mb-4">
-                            <div class="card-header">
-                                <i class="fas fa-table me-1"></i>
-                                Danh Sách Sản Phẩm
-                                <a href="addbook" type="button" class="btn btn-primary">Thêm Book </a>
-
+                        <form action="edituser" method="post">
+                            <table>
+                                <tr>
+                                    <td>ID</td>
+                                    <td><input value="${user.id}" type="text" name="id" readonly></td>
+                                </tr>
                                 
-                            </div>
-                            <div class="card-body">
-                                <table id="datatablesSimple">
-                                    <thead>
-                                        <tr>
-                                            <th>ID Sách</th>
-                                            <th>ID Loại</th>
-                                            <th>Tên Sách</th>
-                                            <th>Giá Sách</th>
-                                            <th>Mô Tả</th>
-                                            <th>Ảnh</th>
-                                            <th>Chức Năng</th>
-                                        </tr>
-                                    </thead>
-                                    <tfoot>
-                                        <tr>
-                                            <th>ID Sách</th>
-                                            <th>ID Loại</th>
-                                            <th>Tên Sách</th>
-                                            <th>Giá Sách</th>
-                                            <th>Mô Tả</th>
-                                            <th>Ảnh</th>
-                                            <th>Chức Năng</th>
-                                    </tfoot>
-                                    <tbody>
-                                        <!-- <c:if test="${not empty list}"> -->
-                                            <c:forEach var="p" items="${list}">
-                                                <tr>
-                                                    <td>${p.idSach}</td>
-                                                    <td>${p.idLoai}</td>
-                                                    <td>${p.tenSach}</td>
-                                                    <td>${p.giaSach}</td>
-                                                    <td>${p.moTa}</td>
-                                                    <td><img src=${p.image}></td>
-                                                    <td>
-                                                        <a href="delete?pid=${p.idSach}" type="button" class="btn btn-primary">Xóa</a>
-                                                        <a href="editbook?pid=${p.idSach}" type="button" class="btn btn-primary">Sửa</a>
-
-                                                    
-                                                </tr>
-                                            </c:forEach>
-                                        <!-- </c:if> -->
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
+                                <tr>
+                                    <td>Username</td>
+                                    <td><input value="${user.username}" type="text" name="username"></td>
+                                </tr>
+                                
+                                
+                                <tr>
+                                    <td>Password</td>
+                                    <td><input value="${user.password}" type="text" name="password"></td>
+                                </tr>
+                                <tr>
+                                    <td>IsAdmin</td>
+                                    <td><input value="${user.isAdmin}" type="text" name="isAdmin"></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td><input type="submit" value="Save"></td>
+                                    <td><a href="userlist">Cancel</a></td>
+                                </tr>
+                            </table>
+                        </form>
                     </div>
                 </main>
                 <footer class="py-4 bg-light mt-auto">

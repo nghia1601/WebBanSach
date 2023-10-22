@@ -45,7 +45,7 @@
                                 <div class="sb-nav-link-icon"><i class="fas fa-chart-area"></i></div>
                                 User List
                             </a>
-                            <a class="nav-link" href="booklist">
+                            <a class="nav-link" href="admin">
                                 <div class="sb-nav-link-icon"><i class="fas fa-table"></i></div>
                                 Book List
                             </a>
@@ -70,7 +70,7 @@
                             <div class="card-header">
                                 <i class="fas fa-table me-1"></i>
                                 Danh Sách Sản Phẩm
-                                <a href="add" type="button" class="btn btn-primary">Thêm Book </a>
+                                <a href="addbook" type="button" class="btn btn-primary">Thêm Book </a>
 
                                 
                             </div>
@@ -81,7 +81,6 @@
                                             <th>ID Sách</th>
                                             <th>ID Loại</th>
                                             <th>Tên Sách</th>
-                                            <th>Số Lượng</th>
                                             <th>Giá Sách</th>
                                             <th>Mô Tả</th>
                                             <th>Ảnh</th>
@@ -93,9 +92,9 @@
                                             <th>ID Sách</th>
                                             <th>ID Loại</th>
                                             <th>Tên Sách</th>
-                                            <th>Số Lượng</th>
                                             <th>Giá Sách</th>
                                             <th>Mô Tả</th>
+                                            <th>Ảnh</th>
                                             <th>Chức Năng</th>
                                     </tfoot>
                                     <tbody>
@@ -105,13 +104,12 @@
                                                     <td>${p.idSach}</td>
                                                     <td>${p.idLoai}</td>
                                                     <td>${p.tenSach}</td>
-                                                    <td>${p.soLuong}</td>
                                                     <td>${p.giaSach}</td>
                                                     <td>${p.moTa}</td>
-                                                    <td><img src="${p.image}"></td>
+                                                    <td><img src=${p.image}></td>
                                                     <td>
                                                         <a href="delete?pid=${p.idSach}" type="button" class="btn btn-primary">Xóa</a>
-                                                        <a type="button" class="btn btn-primary">Sửa</a></td>
+                                                        <a href="editbook?pid=${p.idSach}" type="button" class="btn btn-primary">Sửa</a>
 
                                                     
                                                 </tr>

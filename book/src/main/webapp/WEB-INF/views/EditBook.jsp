@@ -60,65 +60,53 @@
             <div id="layoutSidenav_content">
                 <main>
                     <div class="container-fluid px-4">
-                        <h1 class="mt-4">Book List</h1>
+                        <h1 class="mt-4">Book Edit</h1>
                         <ol class="breadcrumb mb-4">
                             <li class="breadcrumb-item"><a href="home">Home Page</a></li>
-                            <li class="breadcrumb-item active">Tables</li>
+                            <li class="breadcrumb-item active"></li>
                         </ol>
-                        
-                        <div class="card mb-4">
-                            <div class="card-header">
-                                <i class="fas fa-table me-1"></i>
-                                Danh Sách Sản Phẩm
-                                <a href="addbook" type="button" class="btn btn-primary">Thêm Book </a>
-
+                        <form action="editbook" method="post">
+                            <table>
+                                <tr>
+                                    <td>ID Sách: </td>
+                                    <td><input value="${detail.idSach}" type="text" name="idSach" readonly></td>
+                                </tr>
                                 
-                            </div>
-                            <div class="card-body">
-                                <table id="datatablesSimple">
-                                    <thead>
-                                        <tr>
-                                            <th>ID Sách</th>
-                                            <th>ID Loại</th>
-                                            <th>Tên Sách</th>
-                                            <th>Giá Sách</th>
-                                            <th>Mô Tả</th>
-                                            <th>Ảnh</th>
-                                            <th>Chức Năng</th>
-                                        </tr>
-                                    </thead>
-                                    <tfoot>
-                                        <tr>
-                                            <th>ID Sách</th>
-                                            <th>ID Loại</th>
-                                            <th>Tên Sách</th>
-                                            <th>Giá Sách</th>
-                                            <th>Mô Tả</th>
-                                            <th>Ảnh</th>
-                                            <th>Chức Năng</th>
-                                    </tfoot>
-                                    <tbody>
-                                        <!-- <c:if test="${not empty list}"> -->
-                                            <c:forEach var="p" items="${list}">
-                                                <tr>
-                                                    <td>${p.idSach}</td>
-                                                    <td>${p.idLoai}</td>
-                                                    <td>${p.tenSach}</td>
-                                                    <td>${p.giaSach}</td>
-                                                    <td>${p.moTa}</td>
-                                                    <td><img src=${p.image}></td>
-                                                    <td>
-                                                        <a href="delete?pid=${p.idSach}" type="button" class="btn btn-primary">Xóa</a>
-                                                        <a href="editbook?pid=${p.idSach}" type="button" class="btn btn-primary">Sửa</a>
-
-                                                    
-                                                </tr>
-                                            </c:forEach>
-                                        <!-- </c:if> -->
-                                    </tbody>
-                                </table>
-                            </div>
-                        </div>
+                                <tr>
+                                    <td>Tên Sách</td>
+                                    <td><input value="${detail.tenSach}"  type="text" name="tenSach"></td>
+                                </tr>
+                                
+                                <tr>
+                                    
+                                    
+                                    <label>Chọn Loại Sách: </label>
+                                    <select name="idLoai" >
+                                        <c:forEach items="${listC}" var="c">
+                                            <option  value="${c.idLoai}">${c.tenLoai}</option>
+                                        </c:forEach>
+                                    </select>
+                                
+                                </tr>
+                                <tr>
+                                    <td>Giá Sách</td>
+                                    <td><input value="${detail.giaSach}" type="text" name="giaSach"></td>
+                                </tr>
+                                <tr>
+                                    <td>Mô Tả</td>
+                                    <td><textarea cols="30" rows="10" name="moTa">${detail.moTa}</textarea></td>
+                                </tr>
+                                
+                                <tr>
+                                    <td>Hình Ảnh</td>
+                                    <td><input value="${detail.image}" type="text" name="image"></td>
+                                </tr>
+                                <tr>
+                                    <td><input type="submit" value="Save"></td>
+                                    <td><a href="admin">Cancel</a></td>
+                                </tr>
+                            </table>
+                        </form>
                     </div>
                 </main>
                 <footer class="py-4 bg-light mt-auto">
