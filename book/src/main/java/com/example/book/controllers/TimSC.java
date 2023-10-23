@@ -26,6 +26,8 @@ public class TimSC extends HttpServlet{
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+          
+        
         String txtSearch = req.getParameter("txt");
 
         //lay data tu form DBCrud
@@ -38,6 +40,7 @@ public class TimSC extends HttpServlet{
         //tra  du lieu toi jsp
         req.setAttribute("listC", listC);
         req.setAttribute("listP", list);
+        req.setAttribute("txtS", txtSearch);
         req.getRequestDispatcher("/WEB-INF/views/ProductPage.jsp").forward(req, resp);
     }
     

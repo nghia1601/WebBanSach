@@ -60,7 +60,7 @@
                                 </ul>
                             </div>
                         </div>
-                        <div class="col-lg-3 col-md-6 col-sm-6">
+                        <!-- <div class="col-lg-3 col-md-6 col-sm-6">
                             <div class="address">
                                 <h3>corporation</h3>
                                 <ul class="Links_footer">
@@ -71,7 +71,7 @@
                                     <li><a href="#">Login</a> </li>
                                 </ul>
                             </div>
-                        </div>
+                        </div> -->
 
                         <div class="col-lg-3 col-md-6 col-sm-6 ">
                             <div class="address">

@@ -67,7 +67,7 @@
 
                     <form action="search" method="post">
                         <!-- tim kiem -->
-                        <input type="search" placeholder="Search..." id="gsearch" name="txt">
+                        <input value="${txtS}" type="search" placeholder="Search..." id="gsearch" name="txt">
                         <input type="submit">
                     </form> 
 
