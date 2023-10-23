@@ -52,7 +52,7 @@
                                 <h3>MEMBER</h3>
                                 <ul class="Menu_footer">
                                     <li class="active"> <a href="">Nguyễn Trọng Nghĩa</a> </li>
-                                    <li><a href="#">Nguyễn Anh Dung</a> </li>
+                                    <li><a href="#">Nguyễn Anh Dũng</a> </li>
                                     <li><a href="#">Nguyễn Hoàng Giang</a> </li>
                                     <li><a href="#">Nguyễn Lâm Trường</a> </li>
                                     <li><a href="#">Trần Lê Trường Giang</a> </li>

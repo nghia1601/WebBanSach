@@ -25,13 +25,13 @@
 						<div class="card fat">
 							<div class="card-body">
 								<h4 class="card-title">Đăng Nhập</h4>
-								<form  method="POST" class="my-login-validation" novalidate="">
+								<form  action="login" method="POST" class="my-login-validation" novalidate="">
 									
 									<div class="form-group">
 										
 								
 										<label for="username">Username</label>
-										<input id="username" type="username" class="form-control" name="user" value="" required autofocus>
+										<input id="username" type="username" class="form-control" name="user" value="${cookie.user.value}" required autofocus>
 										<div class="invalid-feedback">
 											Bạn chưa nhập Username
 										</div>
@@ -41,10 +41,15 @@
 										<label for="password">Password
 											
 										</label>
-										<input id="password" type="password" class="form-control" name="pass" required data-eye>
+										<input id="password" type="password" class="form-control" name="pass" value="${cookie.pass.value}" required data-eye>
 										<div class="invalid-feedback">
 											Bạn chưa nhập Password!
 										</div>
+									</div>
+
+
+									<div class="form-group">
+										<input type="checkbox" ${(cookie.rem.value eq 'ON')? "checked":""} name="rem" value="ON"> Remember Me
 									</div>
 
 									

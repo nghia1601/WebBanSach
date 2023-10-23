@@ -64,6 +64,8 @@ public class DBCrud {
         return null;
     }
 
+    
+
     //Registe
     public void register(String user, String pass) {
         String query = "insert into account values (0,?,?,0)";
@@ -224,7 +226,7 @@ public class DBCrud {
     }
 
 
-    //lay thong tin user va win ra list
+    //lay thong tin user va in ra list
     public static List<Account> getAllAccount(Connection conn){
         List<Account> accountList = null;
         String sql = "SELECT * FROM account";
