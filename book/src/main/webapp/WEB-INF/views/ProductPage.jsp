@@ -65,11 +65,14 @@
                         </div>
                     </div>
 
+
+                    <!-- search -->
                     <form action="search" method="post">
-                        <!-- tim kiem -->
                         <input value="${txtS}" type="search" placeholder="Search..." id="gsearch" name="txt">
                         <input type="submit">
                     </form> 
+
+
 
                     <div id="sachcode"  class="brand-bg">
                         <div class="row">
@@ -87,7 +90,7 @@
                                     
                                         
                                 </div>
-                                        <a class="buynow" href="#">Add To Card</a>
+                                        <a  class="buynow" href="card?pid=${p.idSach}">Add To Card</a>
                                         <a class="buynow" href="#">Buy now</a>
                                     
                             </div>

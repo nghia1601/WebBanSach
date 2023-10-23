@@ -95,7 +95,7 @@
 
 
                                             <li class="tytyu">
-                                                <a href="shoppingcard"> <img style="margin-right: 15px;" src="icon/2.png" alt="#" /></a>
+                                                <a href="card"> <img style="margin-right: 15px;" src="icon/2.png" alt="#" /></a>
                                             </li>
                                             
 
@@ -111,8 +111,7 @@
                         </div>
                     </div>
                 </div>
-            </header>
-	
+            
 
 
 

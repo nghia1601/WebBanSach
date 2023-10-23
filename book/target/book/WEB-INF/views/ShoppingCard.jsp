@@ -41,6 +41,7 @@
 <body>
 	<!-- header -->
 	<jsp:include page="Header.jsp"></jsp:include>
+	</header>
 	
 	
 	
@@ -65,17 +66,17 @@
 							  <td data-th="Product">
 								  <div class="row">
 									  <div class="col-md-3 text-left">
-										  <img src="https://via.placeholder.com/250x250/5fa9f8/ffffff" alt="" class="img-fluid d-none d-md-block rounded mb-2 shadow ">
+										  <img src="${card.image}" alt="" class="img-fluid d-none d-md-block rounded mb-2 shadow ">
 									  </div>
 									  <div class="col-md-9 text-left mt-sm-2">
-										  <h4>Product Name</h4>
-										  <p class="font-weight-light">Brand &amp; Name</p>
+										  <h4>${card.tenSach}</h4>
+										  <p class="font-weight-light">${card.moTa}</p>
 									  </div>
 								  </div>
 							  </td>
-							  <td data-th="Price">$49.00</td>
+							  <td data-th="Price">$${card.giaSach}</td>
 							  <td data-th="Quantity">
-								  <input type="number" class="form-control form-control-lg text-center" value="1">
+								  <input type="number" name="num" class="form-control form-control-lg text-center" value="1">
 							  </td>
 							  <td class="actions" data-th="">
 								<a href="" type="button" class="btn btn-danger">Xóa</a>
@@ -97,7 +98,7 @@
 				  <a href="catalog.html" class="btn btn-danger mb-4 btn-lg pl-5 pr-5">Checkout</a>
 			  </div>
 			  <div class="col-sm-6 mb-3 mb-m-1 order-md-1 text-md-left">
-				  <a href="product">Tiếp Tục Mua</a>
+				  <a type="button" class="btn btn-danger" href="product" >Tiếp Tục Mua</a>
 			  </div>
 		  </div>
 	  </div>

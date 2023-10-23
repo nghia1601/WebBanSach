@@ -45,7 +45,7 @@
 
     <!-- header -->
     <jsp:include page="Header.jsp"></jsp:include>
-
+    
                     <!-- end header -->
                     <section class="slider_section">
                         <div class="banner_main">
